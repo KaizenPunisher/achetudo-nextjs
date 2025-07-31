@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # AcheTudo-Javascript
 
-## Estrutura em Node, React e React-Native <br>
+## Estrutura em Node NextJS <br>
 
 Sistema Web Mobile com objetivo de centralizar informações de comercios locais. Visando a facilidade de pesquisa de produtos e serviços em centros comerciais.
 
@@ -11,17 +10,46 @@ Sistema Web Mobile com objetivo de centralizar informações de comercios locais
 
 ### (Frontend) Tecnologias
 
-- NextJS - React Framework >> npx create-next-app@15.3.2
+- NextJS - React Framework >>
+
+```
+npx create-next-app@15.3.2
+```
+
 - TypeScript >> Yes
 - ESLint >> Yes
 - Tailwind CSS >> Yes
 - App Router >> Yes
 
-- Prettier - Plugin para organizar a ordem das classes de CSS do Tailwind >> npm install -D prettier prettier-plugin-tailwindcss@0.6.11 prettier@3.5.3
-  OBS: criar arquivo .prettierrc.json -
-  {
-  "plugins": ["prettier-plugin-tailwindcss"]
-  }
+- Prettier - Plugin para organizar a ordem das classes de CSS do Tailwind >>
+  <br>
+
+```
+npm install -D prettier prettier-plugin-tailwindcss@0.6.11 prettier@3.5.3
+```
+
+OBS: criar arquivo .prettierrc.json -
+
+```
+{
+"plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+
+### (Frontend) Tecnologias
+
+- ORM Drizzle: Framework para Mapeamento Objeto-Relacional
+- BD Postgree: Banco de Dados Relacional
+
+```
+npm i drizzle-orm@0.43.1 pg@8.15.6
+```
+
+- Drizzle Kit - Kit para gerenciamento do BD e migrations
+
+```
+npm i -D drizzle-kit@0.31.1
+```
 
 ---
 
@@ -60,7 +88,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# AcheTudo-NextJS
->>>>>>> bf86dac5cbfed190e0bf6451b52a83d3f725c1a3
+# Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
