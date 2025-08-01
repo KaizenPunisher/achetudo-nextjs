@@ -36,7 +36,7 @@ OBS: criar arquivo .prettierrc.json -
 }
 ```
 
-### (Frontend) Tecnologias
+### (Backend) Tecnologias
 
 - ORM Drizzle: Framework para Mapeamento Objeto-Relacional
 - BD Postgree: Banco de Dados Relacional
