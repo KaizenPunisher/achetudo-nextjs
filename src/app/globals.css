@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -118,5 +120,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply font-sans text-black;
+    @apply bg-yellow-300;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold text-black;
   }
 }
