@@ -6,10 +6,10 @@ import Saudacao from "./(componentes)/mensagensdosistema/saudacao";
 
 export default function Home() {
   return (
-    <main className="container m-2 mx-auto box-border flex h-screen w-auto justify-center rounded-3xl border-20 border-white bg-gradient-to-b from-cyan-100 to-cyan-600 shadow-md shadow-gray-700">
+    <main className="container m-2 mx-auto box-border flex h-screen w-screen justify-center rounded-3xl border-20 border-white bg-gradient-to-b from-cyan-100 to-cyan-600 shadow-md shadow-gray-700">
       <div className="container mx-auto h-min">
-        <div className="float-left container h-auto w-auto">
-          <h4 className="float-left container px-5">
+        <div className="float-start container h-auto w-auto">
+          <h4 className="px-9 font-semibold tracking-tight">
             Centro Comercial Cidade Tiradentes
           </h4>
         </div>
