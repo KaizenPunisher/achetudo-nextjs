@@ -114,6 +114,21 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@theme {
+  --breakpoint-sm: 23rem;
+  --animate-fade-in-scale: fade-in-scale 1s ease-out;
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -23,6 +23,9 @@ export const usuariosTableRelations = relations(usuariosTable, ({ one }) => ({
 export const empresasTable = pgTable("empresas", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
+  tipo: text("tipo").notNull(),
+  slug: text("slug").unique(),
+  descricao: text("descricao").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()
@@ -55,28 +58,22 @@ export const empresasTableRelations = relations(empresasTable, ({ one }) => ({
 export const anunciosTable = pgTable("anuncios", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
+  tipo: text("tipo").notNull(),
   imagem1: text("imagem1").notNull(),
-  precoEmCentavos: integer("preco_em_centavos").notNull(),
+  precoEmCentavos: integer("preco_em_centavos"),
   descricao: text("descricao").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date()),
-  servicoId: uuid("servico_id")
+  categoriaId: uuid("categoria_id")
     .notNull()
-    .references(() => servicosTable.id),
-  produtoId: uuid("produto_id")
-    .notNull()
-    .references(() => produtosTable.id),
+    .references(() => categoriasTable.id),
 });
 export const anunciosTableRelations = relations(anunciosTable, ({ one }) => ({
-  servico: one(servicosTable, {
-    fields: [anunciosTable.servicoId],
-    references: [servicosTable.id],
-  }),
-  produto: one(produtosTable, {
-    fields: [anunciosTable.produtoId],
-    references: [produtosTable.id],
+  categoria: one(categoriasTable, {
+    fields: [anunciosTable.categoriaId],
+    references: [categoriasTable.id],
   }),
 }));
 
@@ -98,7 +95,7 @@ export const telefonesTable = pgTable("telefones", {
     .$onUpdate(() => new Date()),
 });
 
-export const servicosTable = pgTable("servicos", {
+export const categoriasTable = pgTable("categorias", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -106,12 +103,9 @@ export const servicosTable = pgTable("servicos", {
     .defaultNow()
     .$onUpdate(() => new Date()),
 });
-
-export const produtosTable = pgTable("produtos", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  nome: text("nome").notNull(),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at")
-    .defaultNow()
-    .$onUpdate(() => new Date()),
-});
+export const categoriaTableRelations = relations(
+  categoriasTable,
+  ({ many }) => ({
+    anuncios: many(anunciosTable),
+  }),
+);
