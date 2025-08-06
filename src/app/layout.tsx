@@ -3,18 +3,12 @@ import { Anton, Comfortaa } from "next/font/google";
 import "./globals.css";
 
 const anton = Anton({
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
-  variable: "--font-anton",
 });
 
-const comfortaa = Comfortaa({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["600", "700"],
-  variable: "--font-comfortaa",
-});
+const comfortaa = Comfortaa({ subsets: ["latin"], display: "fallback" });
 
 export const metadata: Metadata = {
   title: "Ache Tudo",
@@ -29,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${anton.variable} ${comfortaa.variable}`}>
+      <body className={`${anton.className} ${comfortaa.className} antialiased`}>
         {children}
       </body>
     </html>

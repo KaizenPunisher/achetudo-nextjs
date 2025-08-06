@@ -12,7 +12,7 @@ export default function Home() {
     >
       <header className="container h-min w-auto">
         <div className="float-start h-auto w-auto" id="titulo">
-          <h4 className="px-8 font-semibold tracking-tight">
+          <h4 className="px-3 font-semibold tracking-tight">
             Centro Comercial Cidade Tiradentes
           </h4>
         </div>
