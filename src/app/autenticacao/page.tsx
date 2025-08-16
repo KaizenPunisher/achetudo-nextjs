@@ -1,11 +1,22 @@
+"use client";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import EntrarForm from "../(modulos)/entrar";
 import CadastroForm from "../(modulos)/cadastro";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const Autenticacao = () => {
+  const { data: session } = authClient.useSession();
+  const router = useRouter();
+
+  if (session?.user?.name || session?.user?.email) {
+    router.push("/gerenciador");
+  }
+
   return (
     <main
       id="principal"

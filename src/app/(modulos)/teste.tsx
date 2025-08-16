@@ -22,7 +22,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const AdmForm = () => {
+const TesteForm = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -79,4 +79,4 @@ const AdmForm = () => {
   );
 };
 
-export default AdmForm;
+export default TesteForm;

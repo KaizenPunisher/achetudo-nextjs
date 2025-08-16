@@ -108,7 +108,7 @@ const EntrarForm = () => {
                     <FormControl>
                       <Input
                         placeholder="Digite sua senha"
-                        type="senha"
+                        type="password"
                         {...field}
                       />
                     </FormControl>
