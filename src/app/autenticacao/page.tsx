@@ -19,7 +19,7 @@ const Autenticacao = () => {
           className="m-auto mb-3"
         />
       </Link>
-      <div className="flex w-full max-w-sm flex-col gap-6">
+      <div className="m-auto flex w-full max-w-sm flex-col gap-6">
         <Tabs defaultValue="entrar">
           <TabsList>
             <TabsTrigger value="entrar">Entrar</TabsTrigger>

@@ -76,7 +76,6 @@ const CadastroForm = () => {
         },
       },
     });
-    console.log(data, error);
   }
 
   return (
