@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Comfortaa } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const anton = Anton({
   weight: "400",
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${anton.className} ${comfortaa.className} antialiased`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );
