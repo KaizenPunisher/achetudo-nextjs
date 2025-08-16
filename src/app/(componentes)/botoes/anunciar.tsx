@@ -16,7 +16,7 @@ export default function BotaoAnunciar() {
             variant="outline"
             size="icon"
             onClick={() => authClient.signOut()}
-            className="float-right mt-3 mb-1 ml-3"
+            className="float-right mt-3 mb-1 ml-3 cursor-pointer"
           >
             <LogOutIcon />
           </Button>
