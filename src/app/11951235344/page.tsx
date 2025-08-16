@@ -2,7 +2,7 @@ import { Tabs, TabsContent } from "@/components/ui/tabs";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
-import AdmForm from "../(modulos)/adm";
+import TesteForm from "../(modulos)/teste";
 
 const Autenticacao = () => {
   return (
@@ -21,7 +21,7 @@ const Autenticacao = () => {
       <div className="m-auto flex w-full max-w-sm flex-col gap-6">
         <Tabs defaultValue="entrar">
           <TabsContent value="entrar">
-            <AdmForm />
+            <TesteForm />
           </TabsContent>
         </Tabs>
       </div>
