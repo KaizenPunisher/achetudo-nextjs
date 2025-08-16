@@ -51,6 +51,12 @@ npm i drizzle-orm@0.43.1 pg@8.15.6
 npm i -D drizzle-kit@0.31.1
 ```
 
+- Better Auth - Controle de sessão para login
+
+```
+npm i better-auth@1.2.12
+```
+
 ---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
