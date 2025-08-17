@@ -63,7 +63,7 @@ const CadastroForm = () => {
       password: values.senha,
       fetchOptions: {
         onSuccess: () => {
-          router.push("/");
+          router.push("/gerenciador");
         },
         onError: (error) => {
           if (error.error.code === "USER_ALREADY_EXISTS") {

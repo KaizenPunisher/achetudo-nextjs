@@ -43,13 +43,20 @@ const EntrarForm = () => {
     },
   });
 
+  const handleSignInWithGoogle = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: `${window.location.origin}/gerenciador`,
+    });
+  };
+
   async function onSubmit(values: FormValues) {
     await authClient.signIn.email({
       email: values.email,
       password: values.senha,
       fetchOptions: {
         onSuccess: () => {
-          router.push("/");
+          router.push("/gerenciador");
         },
         onError: (ctx) => {
           if (ctx.error.code === "USER_NOT_FOUND") {
@@ -72,12 +79,6 @@ const EntrarForm = () => {
       },
     });
   }
-
-  const handleSignInWithGoogle = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
-  };
 
   return (
     <>
