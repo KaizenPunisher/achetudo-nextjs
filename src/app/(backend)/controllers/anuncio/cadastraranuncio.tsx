@@ -10,6 +10,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { cadastroAnuncio } from "../../models/anuncio/cadastroanuncio";
+import BotaoCadastrarAnuncio from "../componentes/botaocadastraranuncio";
 
 const formSchema = z.object({
   image: z.any(),
@@ -25,7 +27,7 @@ const CadastrarAnuncio = () => {
 
   return (
     <Form {...form}>
-      <form action={""} className="space-y-8 p-5">
+      <form action={cadastroAnuncio} className="space-y-8 p-5">
         <FormField
           control={form.control}
           name="image"
@@ -40,6 +42,7 @@ const CadastrarAnuncio = () => {
             </FormItem>
           )}
         />
+        <BotaoCadastrarAnuncio />
       </form>
     </Form>
   );

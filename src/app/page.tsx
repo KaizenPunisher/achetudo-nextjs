@@ -32,7 +32,7 @@ export default function Home() {
           className="font-botoes clear-both h-auto w-auto p-0"
           id="menu-principal"
         >
-          <ul className="grid h-auto grid-cols-3 text-center">
+          <ul className="grid h-auto grid-cols-3 text-center text-xs">
             <li className="text-xm bg-white pt-2 pb-2 pl-2">PRODUTOS</li>
             <li className="text-xm bg-white pt-2 pb-2 pl-2">SERVIÇOS</li>
             <li className="text-xm bg-white pt-2 pb-2 pl-2">LOJAS</li>
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </header>
       <section className="h-screen w-auto overflow-auto md:overflow-scroll">
-        <ul className="m-0-auto w-auto">
+        <ul className="m-0-auto w-auto text-xs">
           <li className="relative float-left m-0">
             <a
               href="#image-1"
@@ -54,9 +54,9 @@ export default function Home() {
                 sizes="100vw"
                 className="absolute h-full w-full"
               />
-              <h2 className="absolute inset-x-0 bottom-0 z-10 h-13 overflow-hidden bg-white/80 pl-2">
+              <h1 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">
                 Mercadinho Familia
-              </h2>
+              </h1>
             </a>
             <div
               className="animate-fade-in-scale fixed top-0 left-0 -z-10 hidden h-0 w-0 overflow-hidden bg-white p-0 text-center opacity-0 target:z-40 target:block target:h-screen target:w-screen target:opacity-100"
@@ -91,9 +91,9 @@ export default function Home() {
                 sizes="100vw"
                 className="absolute h-full w-full"
               />
-              <h2 className="absolute inset-x-0 bottom-0 z-10 h-13 overflow-hidden bg-white/80 pl-2">
+              <h1 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">
                 Boné Preto ótima qualidade
-              </h2>
+              </h1>
             </a>
             <div
               className="animate-fade-in-scale fixed top-0 left-0 -z-10 hidden h-0 w-0 overflow-hidden bg-white p-0 text-center opacity-0 target:z-40 target:block target:h-screen target:w-screen target:opacity-100"

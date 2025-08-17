@@ -1,6 +1,26 @@
+"use server";
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+
+export const cadastroAnuncio = async (form: FormData) => {
+  const file = form.get("image") as File;
+
+  const buffer = (await file.arrayBuffer()) as unknown as Buffer;
+
+  // upload file to aws s3
+  const client = new S3Client();
+
+  const command = new PutObjectCommand({
+    Bucket: process.env.AWS_S3_BUCKET_NAME,
+    ACL: "public-read",
+    Key: "anuncio/teste.jpg",
+    Body: buffer,
+  });
+
+  await client.send(command);
+};
+
 {
   /* 
-
 "use server";
 
 import { db } from "@/app/_lib/prisma";
