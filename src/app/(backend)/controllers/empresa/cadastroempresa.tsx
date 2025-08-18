@@ -60,7 +60,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(console.log)} className="space-y-8 p-5">
+      <form action={""} className="space-y-8 p-5">
         <FormField
           control={form.control}
           name="nome"
