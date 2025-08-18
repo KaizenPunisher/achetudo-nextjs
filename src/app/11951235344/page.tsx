@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import TesteForm from "../(modulos)/teste";
 
-const Autenticacao = () => {
+const Teste = () => {
   return (
     <main
       id="principal"
@@ -29,4 +29,4 @@ const Autenticacao = () => {
   );
 };
 
-export default Autenticacao;
+export default Teste;

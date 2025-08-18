@@ -5,8 +5,9 @@ import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import CadastroEmpresa from "@/app/(backend)/controllers/empresa/cadastroempresa";
 
-const Gerenciador = () => {
+const CadastramentoEmpresa = () => {
   const { data: session } = authClient.useSession();
   const router = useRouter();
 
@@ -27,28 +28,11 @@ const Gerenciador = () => {
           />
         </Link>
         <div className="m-auto flex w-full max-w-sm flex-col gap-6">
-          <Link
-            href="/gerenciador"
-            className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
-          >
-            Cadastrar Empresa
-          </Link>
-          <Link
-            href="/gerenciador"
-            className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
-          >
-            Fazer Anúncio
-          </Link>
-          <Link
-            href="/gerenciador"
-            className="block rounded-lg bg-yellow-400 p-4 text-center shadow-md hover:bg-yellow-300"
-          >
-            Voltar
-          </Link>
+          <CadastroEmpresa />
         </div>
       </main>
     );
   }
 };
 
-export default Gerenciador;
+export default CadastramentoEmpresa;

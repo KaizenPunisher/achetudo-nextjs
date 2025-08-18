@@ -1,7 +1,7 @@
 "use server";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 
-export const cadastroAnuncio = async (form: FormData) => {
+export const cadastrarAnuncio = async (form: FormData) => {
   const file = form.get("image") as File;
 
   const buffer = (await file.arrayBuffer()) as unknown as Buffer;
