@@ -40,7 +40,7 @@ const Gerenciador = () => {
             Fazer Anúncio
           </Link>
           <Link
-            href="/gerenciador"
+            href="/"
             className="block rounded-lg bg-yellow-400 p-4 text-center shadow-md hover:bg-yellow-300"
           >
             Voltar
