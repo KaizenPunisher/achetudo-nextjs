@@ -52,6 +52,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="100vw"
+                priority={false}
                 className="absolute h-full w-full"
               />
               <h1 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">

@@ -22,13 +22,14 @@ const CadastramentoEmpresa = () => {
         <Link href="/" className="m-auto" id="logo">
           <Image
             alt="Ache Tudo Logo"
+            priority={false}
             src={Logo}
             width={80}
             className="m-auto mb-3"
           />
         </Link>
         <div className="m-auto flex w-full max-w-sm flex-col gap-6">
-          <CadastroEmpresa />
+          <CadastroEmpresa usuarioId={session?.user?.id} />
         </div>
       </main>
     );

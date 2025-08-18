@@ -16,27 +16,34 @@ const formSchema = z.object({
   nome: z.string().min(2).max(100),
   cpf: z
     .string() // Changed from z.number()
-    .min(11, "CPF deve ter 11 dígitos")
-    .max(11, "CPF deve ter 11 dígitos")
+    .min(11, "CPF deve ter 11 dígitos e somente numeros")
+    .max(11, "CPF deve ter 11 dígitos e somente numeros")
     .transform((val) => val.replace(/\D/g, "")),
   cnpj: z
     .string() // Changed from z.number()
-    .min(14, "CNPJ deve ter 14 dígitos")
-    .max(14, "CNPJ deve ter 14 dígitos")
+    .min(14, "CNPJ deve ter 14 dígitos e somente numeros")
+    .max(14, "CNPJ deve ter 14 dígitos e somente numeros")
     .transform((val) => val.replace(/\D/g, "")),
   tipo: z.string().optional(),
   slug: z.string().min(2).max(100),
-  descricao: z.string().min(10).max(500),
-  endereco: z.string(),
+  descricao: z.string(),
+  endereco: z.string().min(4, "Endereço deve ter pelo menos 4 caracteres"),
   telefone: z
     .string() // Changed from z.number()
-    .min(1, "Telefone é obrigatório"),
-  usuario: z.string(),
+    .min(11, "Telefone deve ter 11 dígitos e somente numeros")
+    .max(11, "Telefone deve ter 11 dígitos e somente numeros"),
+  usuarioid: z.string(),
+  admid: z.string(),
 });
 
-const CadastroEmpresa = () => {
+type Props = {
+  usuarioId: string;
+};
+
+function CadastroEmpresa({ usuarioId }: Props) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+
     defaultValues: {
       nome: "",
       cpf: "",
@@ -46,13 +53,14 @@ const CadastroEmpresa = () => {
       descricao: "",
       endereco: "",
       telefone: "",
-      usuario: "",
+      usuarioid: usuarioId,
+      admid: process.env.NEXT_PUBLIC_TESTE_OG!,
     },
   });
 
   return (
     <Form {...form}>
-      <form action={""} className="space-y-8 p-5">
+      <form onSubmit={form.handleSubmit(console.log)} className="space-y-8 p-5">
         <FormField
           control={form.control}
           name="nome"
@@ -201,6 +209,6 @@ const CadastroEmpresa = () => {
       </form>
     </Form>
   );
-};
+}
 
 export default CadastroEmpresa;

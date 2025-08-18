@@ -21,6 +21,7 @@ const Gerenciador = () => {
         <Link href="/" className="m-auto" id="logo">
           <Image
             alt="Ache Tudo Logo"
+            priority={false}
             src={Logo}
             width={80}
             className="m-auto mb-3"
@@ -28,7 +29,7 @@ const Gerenciador = () => {
         </Link>
         <div className="m-auto flex w-full max-w-sm flex-col gap-6">
           <Link
-            href="/gerenciador"
+            href="/gerenciador/cadastrarempresa"
             className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
           >
             Cadastrar Empresa
