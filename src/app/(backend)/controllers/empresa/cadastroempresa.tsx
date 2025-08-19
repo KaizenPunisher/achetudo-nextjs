@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import BotaoSalvar from "../../../(componentes)/botoes/botaosalvar";
+//import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
 
 const formSchema = z.object({
   nome: z.string().min(2).max(100),
@@ -57,10 +58,15 @@ function CadastroEmpresa({ usuarioId }: Props) {
       admid: process.env.NEXT_PUBLIC_TESTE_OG!,
     },
   });
-
   return (
     <Form {...form}>
       <form action={""} className="space-y-8 p-5">
+        <input
+          type="hidden"
+          name="usuarioid"
+          value={form.getValues("usuarioid")}
+        />
+        <input type="hidden" name="admid" value={form.getValues("admid")} />
         <FormField
           control={form.control}
           name="nome"

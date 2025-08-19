@@ -81,34 +81,13 @@ export const empresasTable = pgTable("empresas", {
   updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date()),
-  enderecoId: uuid("endereco_id")
-    .notNull()
-    .references(() => enderecosTable.id, { onDelete: "cascade" }),
-  telefoneId: uuid("telefone_id")
-    .notNull()
-    .references(() => telefonesTable.id, { onDelete: "cascade" }),
-  anuncioId: uuid("anuncio_id").references(() => anunciosTable.id, {
-    onDelete: "cascade",
-  }),
   admId: uuid("adm_id").references(() => admTable.id),
   usuarioId: uuid("usuario_id")
     .notNull()
     .references(() => userTable.id),
 });
 export const empresasTableRelations = relations(empresasTable, ({ one }) => ({
-  endereco: one(enderecosTable, {
-    fields: [empresasTable.enderecoId],
-    references: [enderecosTable.id],
-  }),
-  telefone: one(telefonesTable, {
-    fields: [empresasTable.telefoneId],
-    references: [telefonesTable.id],
-  }),
-  anuncio: one(anunciosTable, {
-    fields: [empresasTable.anuncioId],
-    references: [anunciosTable.id],
-  }),
-  usuario: one(userTable, {
+  usuarioId: one(userTable, {
     fields: [empresasTable.usuarioId],
     references: [userTable.id],
   }),
@@ -132,11 +111,25 @@ export const anunciosTable = pgTable("anuncios", {
   categoriaId: uuid("categoria_id")
     .notNull()
     .references(() => categoriasTable.id, { onDelete: "set null" }),
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresasTable.id, { onDelete: "cascade" }),
+  admId: uuid("adm_id")
+    .notNull()
+    .references(() => admTable.id, { onDelete: "cascade" }),
 });
 export const anunciosTableRelations = relations(anunciosTable, ({ one }) => ({
-  categoria: one(categoriasTable, {
+  categoriaId: one(categoriasTable, {
     fields: [anunciosTable.categoriaId],
     references: [categoriasTable.id],
+  }),
+  empresaId: one(empresasTable, {
+    fields: [anunciosTable.empresaId],
+    references: [empresasTable.id],
+  }),
+  admId: one(admTable, {
+    fields: [anunciosTable.admId],
+    references: [admTable.id],
   }),
 }));
 
@@ -147,7 +140,16 @@ export const enderecosTable = pgTable("enderecos", {
   updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date()),
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresasTable.id, { onDelete: "cascade" }),
 });
+export const enderecosTableRelations = relations(enderecosTable, ({ one }) => ({
+  empresaId: one(empresasTable, {
+    fields: [enderecosTable.empresaId],
+    references: [empresasTable.id],
+  }),
+}));
 
 export const telefonesTable = pgTable("telefones", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -156,7 +158,16 @@ export const telefonesTable = pgTable("telefones", {
   updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date()),
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresasTable.id, { onDelete: "cascade" }),
 });
+export const telefonesTableRelations = relations(telefonesTable, ({ one }) => ({
+  empresaId: one(empresasTable, {
+    fields: [telefonesTable.empresaId],
+    references: [empresasTable.id],
+  }),
+}));
 
 export const categoriasTable = pgTable("categorias", {
   id: uuid("id").defaultRandom().primaryKey(),
