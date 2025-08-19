@@ -7,14 +7,16 @@ import Logo from "../../../public/logo.png";
 import EntrarForm from "../(modulos)/entrar";
 import CadastroForm from "../(modulos)/cadastro";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 const Autenticacao = () => {
   const { data: session } = authClient.useSession();
-  const router = useRouter();
+  //const router = useRouter();
 
   if (session?.user?.name || session?.user?.email) {
-    router.push("/gerenciador");
+    //router.push("/gerenciador");
+    redirect("/gerenciador");
   } else {
     return (
       <main

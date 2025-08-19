@@ -4,14 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 const Gerenciador = () => {
   const { data: session } = authClient.useSession();
-  const router = useRouter();
+  //const router = useRouter();
 
   if (!session?.user?.name || !session?.user?.email) {
-    router.push("/autenticacao");
+    //router.push("/autenticacao");
+    redirect("/autenticacao");
   } else {
     return (
       <main
