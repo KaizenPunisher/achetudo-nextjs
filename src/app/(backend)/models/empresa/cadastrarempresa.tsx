@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/db";
-import { empresasTable } from "@/db/schema";
+import { empresasTable, enderecosTable, telefonesTable } from "@/db/schema";
 import { redirect } from "next/navigation";
 
 export const cadastrarEmpresa = async (form: FormData) => {
@@ -22,12 +22,19 @@ export const cadastrarEmpresa = async (form: FormData) => {
 
     if (!result) {
       throw new Error("Erro ao cadastrar empresa");
-
-      redirect("/gerenciador");
+    } else {
+      await db.insert(enderecosTable).values({
+        nome: form.get("endereco") as string,
+        empresaId: result.id,
+      });
+      await db.insert(telefonesTable).values({
+        nome: form.get("telefone") as string,
+        empresaId: result.id,
+      });
     }
-    redirect("/gerenciador");
   } catch (error) {
-    console.error("Error ao cadastrar empresa:", error);
+    console.error("Error:", error);
     throw error;
   }
+  redirect("/gerenciador");
 };
