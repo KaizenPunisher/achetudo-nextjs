@@ -7,6 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import { encontrarEmpresa } from "../(backend)/models/empresa/encontrarempresa";
 import { useEffect, useState } from "react";
+import MostrarEmpresa from "../(modulos)/empresa/mostrarempresa";
 
 //
 type EmpresaResponse = {
@@ -26,7 +27,17 @@ type EmpresaResponse = {
   enderecos: {
     id: string;
     nome: string;
-  }; // Replace 'any' with the actual type if available
+    createdAt: Date;
+    updatedAt: Date | null;
+    empresaId: string;
+  };
+  telefones: {
+    id: string;
+    nome: string;
+    createdAt: Date;
+    updatedAt: Date | null;
+    empresaId: string;
+  };
 };
 
 const Gerenciador = () => {
@@ -44,7 +55,7 @@ const Gerenciador = () => {
         setEmpresa(response);
       };
       fetchEmpresa();
-    }, [session.user.id]);
+    }, [session?.user?.id]);
 
     if (!empresa) {
       return (
@@ -99,13 +110,7 @@ const Gerenciador = () => {
             />
           </Link>
           <div className="m-auto flex w-full max-w-sm flex-col gap-6">
-            <Link
-              href="/gerenciador"
-              className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
-            >
-              <h3>Nome da empresa</h3>
-              <h6>{empresa.empresas.nome}</h6>
-            </Link>
+            <MostrarEmpresa busca={empresa} />
             <Link
               href="/gerenciador"
               className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
