@@ -12,9 +12,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import BotaoSalvar from "../../../(componentes)/botoes/botaosalvar";
 import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useState } from "react";
 
 const formSchema = z.object({
   nome: z.string().min(2).max(100),
+  tipo: z.string(),
   cpf: z
     .string() // Changed from z.number()
     .min(11, "CPF deve ter 11 dígitos e somente numeros")
@@ -25,7 +34,6 @@ const formSchema = z.object({
     .min(14, "CNPJ deve ter 14 dígitos e somente numeros")
     .max(14, "CNPJ deve ter 14 dígitos e somente numeros")
     .transform((val) => val.replace(/\D/g, "")),
-  tipo: z.string().optional(),
   slug: z.string().min(2).max(100),
   descricao: z.string(),
   endereco: z.string().min(4, "Endereço deve ter pelo menos 4 caracteres"),
@@ -42,14 +50,16 @@ type Props = {
 };
 
 function CadastroEmpresa({ usuarioId }: Props) {
+  const [juridica, setJuridica] = useState("");
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
 
     defaultValues: {
       nome: "",
+      tipo: "",
       cpf: "",
       cnpj: "",
-      tipo: "",
       slug: "",
       descricao: "",
       endereco: "",
@@ -60,7 +70,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
   });
   return (
     <Form {...form}>
-      <form action={cadastrarEmpresa} className="space-y-8 p-5">
+      <form action={""} className="space-y-8 p-5">
         <input
           type="hidden"
           name="usuarioid"
@@ -72,49 +82,9 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="nome"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nome</FormLabel>
+              <FormLabel>Nome Fantasia</FormLabel>
               <FormControl>
-                <Input
-                  placeholder="Digite o nome da Empresa ou nome Fantasia"
-                  type="text"
-                  {...field}
-                />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="cpf"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>CPF</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Digite o CPF da Empresa"
-                  type="text"
-                  {...field}
-                />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="cnpj"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>CNPJ</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Digite o CNPJ da Empresa"
-                  type="text"
-                  {...field}
-                />
+                <Input placeholder="Nome da Empresa" type="text" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -126,37 +96,64 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="tipo"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Tipo</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Digite o tipo da Empresa"
-                  type="text"
-                  {...field}
-                />
-              </FormControl>
-
+              <FormLabel>Pessoa fisica ou juridica ?</FormLabel>
+              <Select onValueChange={setJuridica} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione o tipo de empresa" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="fisica">
+                    Pessoa Fisica (autonomo)
+                  </SelectItem>
+                  <SelectItem value="juridica">Pessoa Juridica</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="slug"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Slug</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Digite o slug da Empresa"
-                  type="text"
-                  {...field}
-                />
-              </FormControl>
+        {juridica === "juridica" && (
+          <FormField
+            control={form.control}
+            name="cnpj"
+            render={({ field }) => (
+              <FormItem id="cnpj">
+                <FormLabel>CNPJ</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Digite o CNPJ da Empresa"
+                    type="text"
+                    {...field}
+                  />
+                </FormControl>
 
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        )}
+        {juridica === "fisica" && (
+          <FormField
+            control={form.control}
+            name="cpf"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>CPF</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Digite o seu CPF"
+                    type="text"
+                    {...field}
+                    id="cpf"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        )}
         <FormField
           control={form.control}
           name="descricao"

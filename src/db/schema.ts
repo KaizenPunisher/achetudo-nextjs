@@ -72,9 +72,9 @@ export const verificationTable = pgTable("verification", {
 export const empresasTable = pgTable("empresas", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
+  tipo: text("tipo").notNull(),
   cpf: text("cpf"),
   cnpj: text("cnpj"),
-  tipo: text("tipo").notNull(),
   slug: text("slug").unique(),
   descricao: text("descricao").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),

@@ -4,17 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/logo.png";
 import { authClient } from "@/lib/auth-client";
-//import { useRouter } from "next/navigation";
 import { redirect } from "next/navigation";
 import CadastroEmpresa from "@/app/(backend)/controllers/empresa/cadastroempresa";
 
 const CadastramentoEmpresa = () => {
   const { data: session } = authClient.useSession();
-  //const router = useRouter();
 
   if (!session?.user?.name || !session?.user?.email) {
     redirect("/autenticacao");
-    //router.push("/autenticacao");
   } else {
     return (
       <main
