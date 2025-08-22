@@ -14,8 +14,7 @@ type EmpresaResponse = {
   empresas: {
     id: string;
     nome: string;
-    cpf: string | null;
-    cnpj: string | null;
+    documento: string;
     tipo: string;
     slug: string | null;
     descricao: string;
