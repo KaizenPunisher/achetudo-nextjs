@@ -35,5 +35,5 @@ export const cadastrarEmpresa = async (form: FormData) => {
     console.error("Error:", error);
     throw error;
   }
-  redirect("/gerenciador");
+  redirect("/");
 };
