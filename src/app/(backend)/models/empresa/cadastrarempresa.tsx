@@ -12,7 +12,7 @@ export const cadastrarEmpresa = async (form: FormData) => {
         nome: form.get("nome") as string,
         documento: form.get("documento") as string,
         tipo: form.get("tipo") as string,
-        slug: "https://www.achetudotiradentes.com.br/" as string,
+        slug: "" as string,
         descricao: form.get("descricao") as string,
         admId: form.get("admid") as string,
         usuarioId: form.get("usuarioid") as string,
