@@ -10,8 +10,7 @@ export const cadastrarEmpresa = async (form: FormData) => {
       .insert(empresasTable)
       .values({
         nome: form.get("nome") as string,
-        cpf: form.get("cpf") as string,
-        cnpj: form.get("cnpj") as string,
+        documento: form.get("documento") as string,
         tipo: form.get("tipo") as string,
         slug: "https://www.achetudotiradentes.com.br/" as string,
         descricao: form.get("descricao") as string,

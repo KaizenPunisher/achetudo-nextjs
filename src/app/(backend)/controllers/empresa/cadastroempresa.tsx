@@ -19,19 +19,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
+import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
 
 const formSchema = z.object({
   nome: z.string().min(2).max(100),
   tipo: z.string(),
-  cpf: z
+  documento: z
     .string() // Changed from z.number()
     .min(11, "CPF deve ter 11 dígitos e somente numeros")
     .max(11, "CPF deve ter 11 dígitos e somente numeros")
-    .transform((val) => val.replace(/\D/g, "")),
-  cnpj: z
-    .string() // Changed from z.number()
-    .min(14, "CNPJ deve ter 14 dígitos e somente numeros")
-    .max(14, "CNPJ deve ter 14 dígitos e somente numeros")
     .transform((val) => val.replace(/\D/g, "")),
   slug: z.string().min(2).max(100),
   descricao: z.string(),
@@ -49,7 +45,7 @@ type Props = {
 };
 
 function CadastroEmpresa({ usuarioId }: Props) {
-  const [juridica, setJuridica] = useState("");
+  const [tipo, setTipo] = useState("");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,8 +53,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
     defaultValues: {
       nome: "",
       tipo: "",
-      cpf: "",
-      cnpj: "",
+      documento: "",
       slug: "",
       descricao: "",
       endereco: "",
@@ -69,13 +64,14 @@ function CadastroEmpresa({ usuarioId }: Props) {
   });
   return (
     <Form {...form}>
-      <form action={""} className="space-y-8 p-5">
+      <form action={cadastrarEmpresa} className="space-y-8 p-5">
         <input
           type="hidden"
           name="usuarioid"
           value={form.getValues("usuarioid")}
         />
         <input type="hidden" name="admid" value={form.getValues("admid")} />
+        <input type="hidden" name="tipo" value={tipo} />
         <FormField
           control={form.control}
           name="nome"
@@ -96,7 +92,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Pessoa fisica ou juridica ?</FormLabel>
-              <Select onValueChange={setJuridica} defaultValue={field.value}>
+              <Select onValueChange={setTipo} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Selecione o tipo de empresa" />
@@ -113,10 +109,10 @@ function CadastroEmpresa({ usuarioId }: Props) {
             </FormItem>
           )}
         />
-        {juridica === "juridica" && (
+        {tipo === "juridica" && (
           <FormField
             control={form.control}
-            name="cnpj"
+            name="documento"
             render={({ field }) => (
               <FormItem id="cnpj">
                 <FormLabel>CNPJ</FormLabel>
@@ -133,10 +129,10 @@ function CadastroEmpresa({ usuarioId }: Props) {
             )}
           />
         )}
-        {juridica === "fisica" && (
+        {tipo === "fisica" && (
           <FormField
             control={form.control}
-            name="cpf"
+            name="documento"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>CPF</FormLabel>
@@ -158,13 +154,9 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="descricao"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Descrição</FormLabel>
+              <FormLabel>Sobre sua empresa ou serviço</FormLabel>
               <FormControl>
-                <Input
-                  placeholder="Digite a descrição da Empresa"
-                  type="text"
-                  {...field}
-                />
+                <Input placeholder="Descrição" type="text" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -194,7 +186,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="telefone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Telefone</FormLabel>
+              <FormLabel>Telefone para contato</FormLabel>
               <FormControl>
                 <Input
                   placeholder="Digite o telefone da Empresa"

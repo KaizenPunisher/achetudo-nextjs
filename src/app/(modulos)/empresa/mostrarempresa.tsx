@@ -2,8 +2,7 @@ interface EmpresaType {
   empresas: {
     id: string;
     nome: string;
-    cpf: string | null;
-    cnpj: string | null;
+    documento: string;
     tipo: string;
     slug: string | null;
     descricao: string;
@@ -43,9 +42,7 @@ const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
           </li>
           <li className="p-2">
             <h3>CPF ou CNPJ</h3>
-            <h5>
-              {busca.empresas.cpf} - {busca.empresas.cnpj}
-            </h5>
+            <h5>{busca.empresas.documento}</h5>
           </li>
           <li className="p-2">
             <h3>Tipo de empresa</h3>
