@@ -1,3 +1,5 @@
+"use client";
+
 import { z } from "zod";
 import {
   Form,
@@ -10,7 +12,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import BotaoSalvar from "../../../(componentes)/botoes/botaosalvar";
 import {
   Select,
   SelectContent,
@@ -20,16 +21,17 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
+import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   nome: z.string().min(2).max(100),
   tipo: z.string(),
   documento: z
     .string() // Changed from z.number()
-    .min(11, "CPF deve ter 11 dígitos e somente numeros")
-    .max(11, "CPF deve ter 11 dígitos e somente numeros")
+    .min(11, "Deve ter 11 dígitos e somente numeros")
+    .max(11, "Deve ter 11 dígitos e somente numeros")
     .transform((val) => val.replace(/\D/g, "")),
-  slug: z.string().min(2).max(100),
+  slug: z.string(),
   descricao: z.string(),
   endereco: z.string().min(4, "Endereço deve ter pelo menos 4 caracteres"),
   telefone: z
@@ -62,16 +64,25 @@ function CadastroEmpresa({ usuarioId }: Props) {
       admid: process.env.NEXT_PUBLIC_TESTE_OG!,
     },
   });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const formData = new FormData();
+    Object.entries(values).forEach(([key, value]) => {
+      formData.append(key, value as string);
+    });
+
+    await cadastrarEmpresa(formData);
+  };
+
   return (
     <Form {...form}>
-      <form action={cadastrarEmpresa} className="space-y-8 p-5">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-5">
         <input
           type="hidden"
           name="usuarioid"
           value={form.getValues("usuarioid")}
         />
         <input type="hidden" name="admid" value={form.getValues("admid")} />
-        <input type="hidden" name="tipo" value={tipo} />
         <FormField
           control={form.control}
           name="nome"
@@ -92,7 +103,13 @@ function CadastroEmpresa({ usuarioId }: Props) {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Pessoa fisica ou juridica ?</FormLabel>
-              <Select onValueChange={setTipo} defaultValue={field.value}>
+              <Select
+                onValueChange={(value) => {
+                  field.onChange(value); // atualiza no react-hook-form
+                  setTipo(value); // mantém também no estado local, se precisar
+                }}
+                defaultValue={field.value}
+              >
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Selecione o tipo de empresa" />
@@ -199,7 +216,9 @@ function CadastroEmpresa({ usuarioId }: Props) {
             </FormItem>
           )}
         />
-        <BotaoSalvar />
+        <Button type="submit" className="w-full cursor-pointer">
+          Salvar
+        </Button>
       </form>
     </Form>
   );
