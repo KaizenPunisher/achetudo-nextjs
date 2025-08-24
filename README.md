@@ -4,6 +4,8 @@
 
 Sistema Web Mobile com objetivo de centralizar informações de comercios locais. Visando a facilidade de pesquisa de produtos e serviços em centros comerciais.
 
+            ![Vercel Deployment Badge](https://vercel-badge.vercel.app/api?achetudo-nextjs-git-main-kaizenpunishers-projects.vercel.app=<your-owner>&repo=<your-repo>&style=for-the-badge)
+
 //// Esse projeto estou desenvolvendo sozinho do zero, no modo FULLSTACK. ////
 
 \_\_ Biblioteca de ferramentas ou tecnologias instaladas
