@@ -12,6 +12,7 @@ export default function Home() {
       id="principal"
       className="container mx-auto mt-0 box-border flex h-screen w-screen flex-col justify-center rounded-3xl border-20 border-white bg-gradient-to-b from-cyan-100 to-cyan-600 shadow-md shadow-gray-700"
     >
+      <BotaoAnunciar />
       <header className="container h-min w-auto">
         <div className="float-start h-auto w-auto" id="titulo">
           <h4 className="px-3 font-semibold tracking-tight">
@@ -23,10 +24,9 @@ export default function Home() {
             alt="Ache Tudo Logo"
             src={Logo}
             width={80}
-            className="pt-2 pb-5 pl-2"
+            className="pt-2 pb-2 pl-2"
           />
         </Link>
-        <BotaoAnunciar />
         <Saudacao />
         <div
           className="font-botoes clear-both h-auto w-auto p-0"

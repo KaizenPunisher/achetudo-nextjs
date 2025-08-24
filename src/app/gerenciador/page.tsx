@@ -112,13 +112,13 @@ const Gerenciador = () => {
             <MostrarEmpresa busca={empresa} />
             <Link
               href="/gerenciador"
-              className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
+              className="block rounded-lg bg-yellow-300 p-4 text-center shadow-md hover:bg-yellow-400"
             >
               Fazer Anúncio
             </Link>
             <Link
               href="/"
-              className="block rounded-lg bg-yellow-400 p-4 text-center shadow-md hover:bg-yellow-300"
+              className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
             >
               Voltar
             </Link>
