@@ -115,7 +115,6 @@
 }
 
 @theme {
-  --kaizen: font-family: var(--font-poppins);
   --breakpoint-sm: 23rem;
   --animate-fade-in-scale: fade-in-scale 1s ease-out;
   @keyframes fade-in-scale {
