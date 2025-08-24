@@ -4,8 +4,6 @@
 
 Sistema Web Mobile com objetivo de centralizar informações de comercios locais. Visando a facilidade de pesquisa de produtos e serviços em centros comerciais.
 
-            [Deploy with Vercel](https://vercel.com/button)(https://vercel.com/new/clone?repository-url=https://github.com/KaizenPunisher/achetudo-nextjs)
-
 //// Esse projeto estou desenvolvendo sozinho do zero, no modo FULLSTACK. ////
 
 \_\_ Biblioteca de ferramentas ou tecnologias instaladas
