@@ -115,7 +115,8 @@
 }
 
 @theme {
-  --breakpoint-sm: 23rem;
+  --font-inter: "Inter", sans-serif;
+  --breakpoint-sm: 24rem;
   --animate-fade-in-scale: fade-in-scale 1s ease-out;
   @keyframes fade-in-scale {
     0% {

@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
-import { Comfortaa } from "next/font/google";
+import { Comfortaa, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 
-const comfortaa = Comfortaa({ subsets: ["latin"], display: "fallback" });
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+  display: "fallback",
+  variable: "--font-comfortaa",
+});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Ache Tudo",
@@ -17,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${inter.variable}`}>
       <body className={`${comfortaa.className} antialiased`}>
         {children}
         <Toaster />

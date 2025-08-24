@@ -13,21 +13,23 @@ export default function Home() {
       className="container mx-auto mt-0 box-border flex h-screen w-screen flex-col justify-center rounded-3xl border-20 border-white bg-gradient-to-b from-cyan-100 to-cyan-600 shadow-md shadow-gray-700"
     >
       <BotaoAnunciar />
-      <header className="container h-min w-auto">
-        <div className="float-start h-auto w-auto" id="titulo">
+      <header className="container m-auto h-min w-full">
+        <div className="h-auto w-full text-center" id="titulo">
           <h4 className="px-3 font-semibold tracking-tight">
             Centro Comercial Cidade Tiradentes
           </h4>
         </div>
-        <Link href="/" className="float-left" id="logo">
-          <Image
-            alt="Ache Tudo Logo"
-            src={Logo}
-            width={80}
-            className="pt-2 pb-2 pl-2"
-          />
-        </Link>
-        <Saudacao />
+        <div className="m-auto w-81">
+          <Link href="/" className="float-left m-auto" id="logo">
+            <Image
+              alt="Ache Tudo Logo"
+              src={Logo}
+              width={80}
+              className="pt-2 pb-2 pl-2"
+            />
+          </Link>
+          <Saudacao />
+        </div>
         <div
           className="font-botoes clear-both h-auto w-auto p-0"
           id="menu-principal"
@@ -40,11 +42,11 @@ export default function Home() {
         </div>
       </header>
       <section className="h-screen w-auto overflow-auto md:overflow-scroll">
-        <ul className="m-0-auto w-auto text-xs">
+        <ul className="m-0-auto font-inter w-auto text-xs">
           <li className="relative float-left m-0">
             <a
               href="#image-1"
-              className="relative z-0 block h-40 w-40 sm:h-41 sm:w-41 md:h-45 md:w-45 lg:h-51 lg:w-51"
+              className="relative z-0 block h-40 w-40 sm:h-43 sm:w-43 md:h-45 md:w-45 lg:h-51 lg:w-51"
             >
               <Image
                 alt="Teste"
@@ -55,9 +57,9 @@ export default function Home() {
                 priority={false}
                 className="absolute h-full w-full"
               />
-              <h1 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">
+              <h3 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">
                 Mercadinho Familia
-              </h1>
+              </h3>
             </a>
             <div
               className="animate-fade-in-scale fixed top-0 left-0 -z-10 hidden h-0 w-0 overflow-hidden bg-white p-0 text-center opacity-0 target:z-40 target:block target:h-screen target:w-screen target:opacity-100"
@@ -82,7 +84,7 @@ export default function Home() {
           <li className="relative float-left m-0">
             <a
               href="#image-2"
-              className="relative z-0 block h-40 w-40 sm:h-41 sm:w-41 md:h-45 md:w-45 lg:h-51 lg:w-51"
+              className="relative z-0 block h-40 w-40 sm:h-43 sm:w-43 md:h-45 md:w-45 lg:h-51 lg:w-51"
             >
               <Image
                 alt="Teste"
