@@ -5,8 +5,9 @@ import Image from "next/image";
 import Logo from "../../../../public/logo.png";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
+import EditarEmpresa from "@/app/(backend)/controllers/empresa/editarempresa";
 
-const CadastramentoEmpresa = () => {
+const EdicaoEmpresa = () => {
   const { data: session } = authClient.useSession();
 
   if (!session?.user?.name || !session?.user?.email) {
@@ -26,10 +27,12 @@ const CadastramentoEmpresa = () => {
             className="m-auto mb-3"
           />
         </Link>
-        <div className="m-auto flex w-full max-w-sm flex-col gap-6"></div>
+        <div className="m-auto flex w-full max-w-sm flex-col gap-6">
+          <EditarEmpresa usuarioId={session?.user?.id} />
+        </div>
       </main>
     );
   }
 };
 
-export default CadastramentoEmpresa;
+export default EdicaoEmpresa;

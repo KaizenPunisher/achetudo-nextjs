@@ -7,7 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import { encontrarEmpresa } from "../(backend)/models/empresa/encontrarempresa";
 import { useEffect, useState } from "react";
-import MostrarEmpresa from "../(modulos)/empresa/mostrarempresa";
+import MostrarEmpresa from "../(backend)/controllers/empresa/mostrarempresa";
 
 //
 type EmpresaResponse = {

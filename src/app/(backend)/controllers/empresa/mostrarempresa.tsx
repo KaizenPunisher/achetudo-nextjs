@@ -65,7 +65,7 @@ const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/gerenciador/editarempresa"
               className="absolute right-10 bottom-6 m-auto opacity-65 shadow-sm transition duration-800 hover:opacity-100"
               id="logo"
             >
