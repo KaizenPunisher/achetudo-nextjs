@@ -37,7 +37,7 @@ interface MostrarEmpresaProps {
 const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
   return (
     <>
-      <div className="relative rounded-lg bg-white p-4 shadow-md">
+      <div className="relative rounded-lg bg-white p-4 pr-10 pb-15 shadow-md">
         <ul className="flex flex-wrap text-xs">
           <li className="p-2">
             <h3>Empresa</h3>
