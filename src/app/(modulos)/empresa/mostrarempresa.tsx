@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { FilePen } from "lucide-react";
+
 interface EmpresaType {
   empresas: {
     id: string;
@@ -34,7 +37,7 @@ interface MostrarEmpresaProps {
 const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
   return (
     <>
-      <div className="rounded-lg bg-white p-4 shadow-md">
+      <div className="relative rounded-lg bg-white p-4 shadow-md">
         <ul className="flex flex-wrap text-xs">
           <li className="p-2">
             <h3>Empresa</h3>
@@ -59,6 +62,15 @@ const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
           <li className="p-2">
             <h3>Telefone</h3>
             <h5>{busca.telefones.nome}</h5>
+          </li>
+          <li>
+            <Link
+              href="/"
+              className="absolute right-10 bottom-6 m-auto opacity-65 shadow-sm transition duration-800 hover:opacity-100"
+              id="logo"
+            >
+              <FilePen></FilePen>
+            </Link>
           </li>
         </ul>
       </div>
