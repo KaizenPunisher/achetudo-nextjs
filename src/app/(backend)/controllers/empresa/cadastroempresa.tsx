@@ -24,7 +24,7 @@ import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
 import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
-  nome: z.string().min(2).max(100),
+  nome: z.string().min(2, "Campo não pode ficar vazio").max(100),
   tipo: z.string(),
   documento: z
     .string() // Changed from z.number()
@@ -171,7 +171,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="descricao"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Sobre sua empresa ou serviço</FormLabel>
+              <FormLabel>Sobre sua empresa, serviço ou produto</FormLabel>
               <FormControl>
                 <Input placeholder="Descrição" type="text" {...field} />
               </FormControl>
@@ -203,7 +203,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="telefone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Telefone para contato</FormLabel>
+              <FormLabel>Telefone para contato (Whatsapp)</FormLabel>
               <FormControl>
                 <Input
                   placeholder="Digite o telefone da Empresa"
