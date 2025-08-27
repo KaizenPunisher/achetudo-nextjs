@@ -22,6 +22,7 @@ import { useEffect, useState } from "react";
 import { encontrarEmpresa } from "../../models/empresa/encontrarempresa";
 import Link from "next/link";
 import BotaoSalvar from "@/app/(componentes)/botoes/botaosalvar";
+import { editarEmpresa } from "../../models/empresa/editarempresa";
 
 const formSchema = z.object({
   nome: z.string(),
@@ -30,8 +31,8 @@ const formSchema = z.object({
   descricao: z.string(),
   endereco: z.string(),
   telefone: z.string(),
-  usuarioid: z.string(),
-  admid: z.string(),
+  usuarioid: z.string().uuid(),
+  admid: z.string().uuid(),
 });
 
 type Props = {
@@ -120,8 +121,9 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
+
     console.log(JSON.stringify(values));
-    //await EditarEmpresa(formData);
+    await editarEmpresa(formData);
   };
 
   return (
