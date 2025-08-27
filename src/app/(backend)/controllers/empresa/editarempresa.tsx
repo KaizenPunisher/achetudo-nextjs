@@ -122,7 +122,6 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
       formData.append(key, value as string);
     });
 
-    console.log(JSON.stringify(values));
     await editarEmpresa(formData);
   };
 
