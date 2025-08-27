@@ -21,22 +21,16 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { encontrarEmpresa } from "../../models/empresa/encontrarempresa";
 import Link from "next/link";
+import BotaoSalvar from "@/app/(componentes)/botoes/botaosalvar";
 
 const formSchema = z.object({
-  nome: z.string().min(2, "Digite o nome da empresa").max(100),
+  nome: z.string(),
   tipo: z.string(),
-  documento: z
-    .string() // Changed from z.number()
-    .min(11, "Deve ter 11 dígitos e somente numeros")
-    .max(11, "Deve ter 11 dígitos e somente numeros")
-    .transform((val) => val.replace(/\D/g, "")),
+  documento: z.string().transform((val) => val.replace(/\D/g, "")),
   slug: z.string(),
   descricao: z.string(),
-  endereco: z.string().min(4, "Endereço deve ter pelo menos 4 caracteres"),
-  telefone: z
-    .string() // Changed from z.number()
-    .min(11, "Telefone deve ter 11 dígitos e somente numeros")
-    .max(11, "Telefone deve ter 11 dígitos e somente numeros"),
+  endereco: z.string(),
+  telefone: z.string(),
   usuarioid: z.string(),
   admid: z.string(),
 });
@@ -75,7 +69,6 @@ type EmpresaResponse = {
 };
 
 const EditarEmpresa = ({ usuarioId }: Props) => {
-  const [tipo, setTipo] = useState("");
   const [empresa, setEmpresa] = useState<EmpresaResponse | null>(null);
 
   useEffect(() => {
@@ -86,6 +79,8 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
     };
     fetchEmpresa();
   }, [usuarioId]);
+
+  const [tipo, setTipo] = useState("");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -105,10 +100,30 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     const formData = new FormData();
+
+    if (values.nome === "") {
+      values.nome = empresa?.empresas.nome as string;
+    }
+    if (values.tipo === "") {
+      values.tipo = empresa?.empresas.tipo as string;
+    }
+    if (values.documento === "") {
+      values.documento = empresa?.empresas.documento as string;
+    }
+    if (values.descricao === "") {
+      values.descricao = empresa?.empresas.descricao as string;
+    }
+    if (values.endereco === "") {
+      values.endereco = empresa?.enderecos.nome as string;
+    }
+    if (values.telefone === "") {
+      values.telefone = empresa?.telefones.nome as string;
+    }
+
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
-    console.log(JSON.stringify(FormData));
+    // console.log(JSON.stringify(form));
     //await cadastrarEmpresa(formData);
   };
 
@@ -134,7 +149,6 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
                   {...field}
                 />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
@@ -262,9 +276,7 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full cursor-pointer">
-          Salvar
-        </Button>
+        <BotaoSalvar />
         <Link href="/gerenciador">
           <Button
             type="button"
