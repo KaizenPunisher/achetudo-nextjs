@@ -65,8 +65,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ### Breve apresentação da interface e criação da identidade visual
 
-<img src="/public/diagrama_logo.png" width="390" height="450" /><img src="/public/apresentacao_1.jpg" width="390" height="450" />
+<img src="/public/diagrama_logo.png" width="390" height="1280" /><img src="/public/apresentacao_1.jpg" width="390" height="1280" />
 
-<img src="/public/apresentacao_2.jpg" width="390" height="450" /><img src="/public/apresentacao_3.jpg" width="390" height="450" />
+<img src="/public/apresentacao_2.jpg" width="390" height="1280" /><img src="/public/apresentacao_3.jpg" width="390" height="1280" />
 
-<img src="/public/apresentacao_4.jpg" width="390" height="450" />
+<img src="/public/apresentacao_4.jpg" width="390" height="1280" />
