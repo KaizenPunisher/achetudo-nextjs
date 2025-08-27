@@ -27,7 +27,6 @@ const formSchema = z.object({
   nome: z.string(),
   tipo: z.string(),
   documento: z.string().transform((val) => val.replace(/\D/g, "")),
-  slug: z.string(),
   descricao: z.string(),
   endereco: z.string(),
   telefone: z.string(),
@@ -45,7 +44,6 @@ type EmpresaResponse = {
     nome: string;
     documento: string;
     tipo: string;
-    slug: string | null;
     descricao: string;
     createdAt: Date;
     updatedAt: Date | null;
@@ -89,7 +87,6 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
       nome: "",
       tipo: "",
       documento: "",
-      slug: "",
       descricao: "",
       endereco: "",
       telefone: "",
@@ -123,8 +120,8 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
-    // console.log(JSON.stringify(form));
-    //await cadastrarEmpresa(formData);
+    console.log(JSON.stringify(values));
+    //await EditarEmpresa(formData);
   };
 
   return (
