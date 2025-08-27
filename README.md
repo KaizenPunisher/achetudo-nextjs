@@ -63,10 +63,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ---
 
-# Breve apresentação da interface e criação da identidade visual
+## Breve apresentação da interface e criação da identidade visual
 
-<img src="/frontend/src/imagens/diagrama_logo.png"/>
-<img src="/frontend/src/imagens/apresentacao_1.jpg"/>
-<img src="/frontend/src/imagens/apresentacao_2.jpg"/>
-<img src="/frontend/src/imagens/apresentacao_3.jpg"/>
-<img src="/frontend/src/imagens/apresentacao_4.jpg"/>
+<img src="/public/diagrama_logo.png"/>
+<img src="/public/apresentacao_1.jpg"/>
+<img src="/public/apresentacao_2.jpg"/>
+<img src="/public/apresentacao_3.jpg"/>
+<img src="/public/apresentacao_4.jpg"/>
