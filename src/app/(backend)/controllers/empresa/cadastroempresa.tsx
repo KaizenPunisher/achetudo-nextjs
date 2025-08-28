@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
-import { Button } from "@/components/ui/button";
+import BotaoSalvar from "@/app/(componentes)/botoes/botaosalvar";
 
 const formSchema = z.object({
   nome: z.string().min(2, "Campo não pode ficar vazio").max(100),
@@ -216,9 +216,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full cursor-pointer">
-          Salvar
-        </Button>
+        <BotaoSalvar />
       </form>
     </Form>
   );

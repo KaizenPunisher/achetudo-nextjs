@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FilePen } from "lucide-react";
+import { FilePen, Trash2 } from "lucide-react";
+import DeletarEmpresa from "./deletarempresa";
 
 interface EmpresaType {
   empresas: {
@@ -37,7 +38,10 @@ interface MostrarEmpresaProps {
 const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
   return (
     <>
-      <div className="relative rounded-lg bg-white p-4 pr-10 pb-15 shadow-md">
+      <div
+        className="relative rounded-lg bg-white p-4 pr-10 pb-15 shadow-md"
+        id="#mostrarempresa"
+      >
         <ul className="flex flex-wrap text-xs">
           <li className="p-2">
             <h3>Empresa</h3>
@@ -66,11 +70,17 @@ const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
           <li>
             <Link
               href="/gerenciador/editarempresa"
-              className="absolute right-10 bottom-6 m-auto opacity-65 shadow-sm transition duration-800 hover:opacity-100"
-              id="logo"
+              className="absolute right-25 bottom-6 m-auto opacity-65 shadow-sm transition duration-800 hover:opacity-100"
             >
               <FilePen></FilePen>
             </Link>
+            <a
+              href="#deletarempresa"
+              className="absolute right-10 bottom-6 m-auto opacity-65 shadow-sm transition duration-800 hover:opacity-100"
+            >
+              <Trash2 className="text-red-600" />
+            </a>
+            <DeletarEmpresa empresaprop={busca.empresas.id} />
           </li>
         </ul>
       </div>
