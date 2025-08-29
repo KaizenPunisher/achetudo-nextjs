@@ -29,6 +29,8 @@ const formSchema = z.object({
   tipo: z.string(),
   documento: z.string().transform((val) => val.replace(/\D/g, "")),
   descricao: z.string(),
+  aberturaHorario: z.string().optional(),
+  fechamentoHorario: z.string().optional(),
   endereco: z.string(),
   telefone: z.string(),
   usuarioid: z.string().uuid(),
@@ -46,6 +48,8 @@ type EmpresaResponse = {
     documento: string;
     tipo: string;
     descricao: string;
+    abertura_horario: string | null;
+    fechamento_horario: string | null;
     createdAt: Date;
     updatedAt: Date | null;
     admId: string | null;
@@ -89,6 +93,8 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
       tipo: "",
       documento: "",
       descricao: "",
+      aberturaHorario: "",
+      fechamentoHorario: "",
       endereco: "",
       telefone: "",
       usuarioid: usuarioId,
@@ -110,6 +116,12 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
     }
     if (values.descricao === "") {
       values.descricao = empresa?.empresas.descricao as string;
+    }
+    if (values.aberturaHorario === "") {
+      values.aberturaHorario = empresa?.empresas.abertura_horario as string;
+    }
+    if (values.fechamentoHorario === "") {
+      values.fechamentoHorario = empresa?.empresas.fechamento_horario as string;
     }
     if (values.endereco === "") {
       values.endereco = empresa?.enderecos.nome as string;
@@ -232,6 +244,34 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
                   type="text"
                   {...field}
                 />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="aberturaHorario"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Horário de Abertura da empresa ou serviço</FormLabel>
+              <FormControl>
+                <Input placeholder="Exemplo: 09:00" type="text" {...field} />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="fechamentoHorario"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Horário de Fechamento da empresa ou serviço</FormLabel>
+              <FormControl>
+                <Input placeholder="Exemplo: 18:00" type="text" {...field} />
               </FormControl>
 
               <FormMessage />

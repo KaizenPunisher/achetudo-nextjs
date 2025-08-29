@@ -14,6 +14,8 @@ export const editarEmpresa = async (form: FormData) => {
         tipo: form.get("tipo") as string,
         documento: form.get("documento") as string,
         descricao: form.get("descricao") as string,
+        abertura_horario: form.get("aberturaHorario") as string | null,
+        fechamento_horario: form.get("fechamentoHorario") as string | null,
       })
       .where(eq(empresasTable.usuarioId, `${form.get("usuarioid")}`))
       .returning({ empresaid: empresasTable.id });
@@ -39,5 +41,5 @@ export const editarEmpresa = async (form: FormData) => {
     console.error("Error:", error);
     throw error;
   }
-  redirect("/");
+  redirect("/gerenciador");
 };
