@@ -13,6 +13,8 @@ export const cadastrarEmpresa = async (form: FormData) => {
         documento: form.get("documento") as string,
         tipo: form.get("tipo") as string,
         slug: form.get("nome") as string,
+        abertura_horario: form.get("aberturaHorario") as string,
+        fechamento_horario: form.get("fechamentoHorario") as string,
         descricao: form.get("descricao") as string,
         admId: form.get("admid") as string,
         usuarioId: form.get("usuarioid") as string,
