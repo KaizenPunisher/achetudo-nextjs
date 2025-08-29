@@ -18,6 +18,8 @@ type EmpresaResponse = {
     tipo: string;
     slug: string | null;
     descricao: string;
+    abertura_horario: string | null;
+    fechamento_horario: string | null;
     createdAt: Date;
     updatedAt: Date | null;
     admId: string | null;
