@@ -10,6 +10,8 @@ interface EmpresaType {
     tipo: string;
     slug: string | null;
     descricao: string;
+    abertura_horario: string | null;
+    fechamento_horario: string | null;
     createdAt: Date;
     updatedAt: Date | null;
     admId: string | null;
@@ -58,6 +60,14 @@ const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
           <li className="p-2">
             <h3>Sobre a empresa</h3>
             <h5>{busca.empresas.descricao}</h5>
+          </li>
+          <li className="p-2">
+            <h3>Horário de Abertura</h3>
+            <h5>{busca.empresas.abertura_horario}</h5>
+          </li>
+          <li className="p-2">
+            <h3>Horário de Fechamento</h3>
+            <h5>{busca.empresas.fechamento_horario}</h5>
           </li>
           <li className="p-2">
             <h3>Endereço</h3>
