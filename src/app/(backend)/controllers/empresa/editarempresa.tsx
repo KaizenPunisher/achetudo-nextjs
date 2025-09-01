@@ -257,7 +257,11 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
             <FormItem>
               <FormLabel>Horário de Abertura da empresa ou serviço</FormLabel>
               <FormControl>
-                <Input placeholder="Exemplo: 09:00" type="text" {...field} />
+                <Input
+                  placeholder={`${empresa?.empresas.abertura_horario}`}
+                  type="text"
+                  {...field}
+                />
               </FormControl>
 
               <FormMessage />
@@ -271,7 +275,11 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
             <FormItem>
               <FormLabel>Horário de Fechamento da empresa ou serviço</FormLabel>
               <FormControl>
-                <Input placeholder="Exemplo: 18:00" type="text" {...field} />
+                <Input
+                  placeholder={`${empresa?.empresas.fechamento_horario}`}
+                  type="text"
+                  {...field}
+                />
               </FormControl>
 
               <FormMessage />
