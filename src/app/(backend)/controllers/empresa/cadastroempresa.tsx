@@ -41,7 +41,7 @@ const formSchema = z.object({
     .min(11, "Telefone deve ter 11 dígitos e somente numeros")
     .max(11, "Telefone deve ter 11 dígitos e somente numeros"),
   usuarioid: z.string(),
-  admid: z.string(),
+  remid: z.string(),
 });
 
 type Props = {
@@ -65,7 +65,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
       endereco: "",
       telefone: "",
       usuarioid: usuarioId,
-      admid: process.env.NEXT_PUBLIC_TESTE_OG!,
+      remid: process.env.NEXT_PUBLIC_TESTE_OG!,
     },
   });
 
@@ -86,7 +86,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
           name="usuarioid"
           value={form.getValues("usuarioid")}
         />
-        <input type="hidden" name="admid" value={form.getValues("admid")} />
+        <input type="hidden" name="remid" value={form.getValues("remid")} />
         <FormField
           control={form.control}
           name="nome"

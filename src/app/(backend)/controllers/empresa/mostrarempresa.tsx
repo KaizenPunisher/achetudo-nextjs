@@ -14,7 +14,7 @@ interface EmpresaType {
     fechamento_horario: string | null;
     createdAt: Date;
     updatedAt: Date | null;
-    admId: string | null;
+    remId: string | null;
     usuarioId: string;
   };
   enderecos: {

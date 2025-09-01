@@ -82,7 +82,7 @@ export const empresasTable = pgTable("empresas", {
   updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date()),
-  admId: uuid("adm_id").references(() => admTable.id),
+  remId: uuid("rem_id").references(() => remsTable.id),
   usuarioId: uuid("usuario_id")
     .notNull()
     .references(() => userTable.id),
@@ -92,9 +92,9 @@ export const empresasTableRelations = relations(empresasTable, ({ one }) => ({
     fields: [empresasTable.usuarioId],
     references: [userTable.id],
   }),
-  admId: one(admTable, {
-    fields: [empresasTable.admId],
-    references: [admTable.id],
+  remId: one(remsTable, {
+    fields: [empresasTable.remId],
+    references: [remsTable.id],
   }),
 }));
 
@@ -111,13 +111,13 @@ export const anunciosTable = pgTable("anuncios", {
     .$onUpdate(() => new Date()),
   categoriaId: uuid("categoria_id")
     .notNull()
-    .references(() => categoriasTable.id, { onDelete: "set null" }),
+    .references(() => categoriasTable.id),
   empresaId: uuid("empresa_id")
     .notNull()
-    .references(() => empresasTable.id, { onDelete: "cascade" }),
-  admId: uuid("adm_id")
+    .references(() => empresasTable.id),
+  remId: uuid("rem_id")
     .notNull()
-    .references(() => admTable.id, { onDelete: "cascade" }),
+    .references(() => remsTable.id),
 });
 export const anunciosTableRelations = relations(anunciosTable, ({ one }) => ({
   categoriaId: one(categoriasTable, {
@@ -128,9 +128,9 @@ export const anunciosTableRelations = relations(anunciosTable, ({ one }) => ({
     fields: [anunciosTable.empresaId],
     references: [empresasTable.id],
   }),
-  admId: one(admTable, {
-    fields: [anunciosTable.admId],
-    references: [admTable.id],
+  remId: one(remsTable, {
+    fields: [anunciosTable.remId],
+    references: [remsTable.id],
   }),
 }));
 
@@ -185,15 +185,66 @@ export const categoriaTableRelations = relations(
   }),
 );
 
-export const admTable = pgTable("administradores", {
+export const arksTable = pgTable("arks", {
   id: uuid("id").defaultRandom().primaryKey(),
-  nome: text("nome").notNull(),
-  email: text("email").notNull().unique(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at")
+    .defaultNow()
+    .$onUpdate(() => new Date()),
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresasTable.id),
+  remId: uuid("rem_id")
+    .notNull()
+    .references(() => remsTable.id),
+});
+export const arksTableRelations = relations(arksTable, ({ one }) => ({
+  empresa: one(empresasTable, {
+    fields: [arksTable.empresaId],
+    references: [empresasTable.id],
+  }),
+  rems: one(remsTable, {
+    fields: [arksTable.remId],
+    references: [remsTable.id],
+  }),
+}));
+
+export const trsTable = pgTable("trs", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  ve: timestamp("ve").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at")
+    .defaultNow()
+    .$onUpdate(() => new Date()),
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresasTable.id),
+  remId: uuid("rem_id")
+    .notNull()
+    .references(() => remsTable.id),
+});
+export const trsTableRelations = relations(trsTable, ({ one }) => ({
+  empresa: one(empresasTable, {
+    fields: [trsTable.empresaId],
+    references: [empresasTable.id],
+  }),
+  remId: one(remsTable, {
+    fields: [trsTable.remId],
+    references: [remsTable.id],
+  }),
+}));
+
+export const remsTable = pgTable("rems", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  o: text("o").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()
     .$onUpdate(() => new Date()),
 });
-export const admTableRelations = relations(admTable, ({ many }) => ({
+export const remsTableRelations = relations(remsTable, ({ many }) => ({
   empresas: many(empresasTable),
+  anuncios: many(anunciosTable),
+  arks: many(arksTable),
+  trs: many(trsTable),
 }));

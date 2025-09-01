@@ -34,7 +34,7 @@ const formSchema = z.object({
   endereco: z.string(),
   telefone: z.string(),
   usuarioid: z.string().uuid(),
-  admid: z.string().uuid(),
+  remid: z.string().uuid(),
 });
 
 type Props = {
@@ -52,7 +52,7 @@ type EmpresaResponse = {
     fechamento_horario: string | null;
     createdAt: Date;
     updatedAt: Date | null;
-    admId: string | null;
+    remId: string | null;
     usuarioId: string;
   };
   enderecos: {
@@ -98,7 +98,7 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
       endereco: "",
       telefone: "",
       usuarioid: usuarioId,
-      admid: process.env.NEXT_PUBLIC_TESTE_OG!,
+      remid: process.env.NEXT_PUBLIC_TESTE_OG!,
     },
   });
 
@@ -145,7 +145,7 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
           name="usuarioid"
           value={form.getValues("usuarioid")}
         />
-        <input type="hidden" name="admid" value={form.getValues("admid")} />
+        <input type="hidden" name="remid" value={form.getValues("remid")} />
         <FormField
           control={form.control}
           name="nome"

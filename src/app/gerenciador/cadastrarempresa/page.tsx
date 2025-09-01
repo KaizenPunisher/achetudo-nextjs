@@ -19,7 +19,7 @@ type EmpresaResponse = {
     descricao: string;
     createdAt: Date;
     updatedAt: Date | null;
-    admId: string | null;
+    remId: string | null;
     usuarioId: string;
   };
   enderecos: {

@@ -40,7 +40,6 @@ const DeletarEmpresa = ({ empresaprop }: Props) => {
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
-    console.log(values);
     await deletarEmpresa(formData);
   };
 
