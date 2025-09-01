@@ -12,10 +12,8 @@ import { redirect } from "next/navigation";
 
 const Autenticacao = () => {
   const { data: session } = authClient.useSession();
-  //const router = useRouter();
 
   if (session?.user?.name || session?.user?.email) {
-    //router.push("/gerenciador");
     redirect("/gerenciador");
   } else {
     return (
