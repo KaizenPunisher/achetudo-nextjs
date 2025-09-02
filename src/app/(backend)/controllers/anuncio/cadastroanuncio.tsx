@@ -27,7 +27,9 @@ const formSchema = z.object({
   nome: z.string().min(2, "Campo não pode ficar vazio").max(100),
   tipo: z.string(),
   imagem1: z.string().optional(),
-  precoemcentavos: z.string().min(1, "Campo não pode ficar vazio"),
+  precoemcentavos: z
+    .string()
+    .transform((val) => String(val.replace(/\D/g, ""))),
   descricao: z.string(),
   usuarioid: z.string(),
 });
@@ -55,10 +57,7 @@ function CadastroAnuncio({ usuarioId }: Props) {
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
-    console.log(
-      "Form Data Submitted:",
-      JSON.stringify(Object.fromEntries(formData)),
-    );
+
     //await cadastrarAnuncio(formData);
   };
 
