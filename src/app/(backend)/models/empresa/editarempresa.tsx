@@ -41,5 +41,5 @@ export const editarEmpresa = async (form: FormData) => {
     console.error("Error:", error);
     throw error;
   }
-  redirect("/gerenciador");
+  redirect("/");
 };

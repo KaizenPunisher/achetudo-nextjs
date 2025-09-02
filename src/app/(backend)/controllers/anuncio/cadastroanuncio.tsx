@@ -57,7 +57,7 @@ function CadastroAnuncio({ usuarioId }: Props) {
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
-
+    console.log(Object.fromEntries(formData));
     //await cadastrarAnuncio(formData);
   };
 
