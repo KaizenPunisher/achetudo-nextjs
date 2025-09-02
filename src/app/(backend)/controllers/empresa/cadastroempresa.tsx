@@ -22,6 +22,8 @@ import {
 import { useState } from "react";
 import { cadastrarEmpresa } from "../../models/empresa/cadastrarempresa";
 import BotaoSalvar from "@/app/(componentes)/botoes/botaosalvar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const formSchema = z.object({
   nome: z.string().min(2, "Campo não pode ficar vazio").max(100),
@@ -246,6 +248,14 @@ function CadastroEmpresa({ usuarioId }: Props) {
           )}
         />
         <BotaoSalvar />
+        <Link href="/gerenciador">
+          <Button
+            type="button"
+            className="w-full cursor-pointer bg-amber-50 text-black hover:bg-amber-200"
+          >
+            Voltar
+          </Button>
+        </Link>
       </form>
     </Form>
   );

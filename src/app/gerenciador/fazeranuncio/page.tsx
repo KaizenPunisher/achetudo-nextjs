@@ -5,6 +5,7 @@ import Image from "next/image";
 import Logo from "../../../../public/logo.png";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
+import CadastroAnuncio from "@/app/(backend)/controllers/anuncio/cadastroanuncio";
 
 const FazerAnuncio = () => {
   const { data: session } = authClient.useSession();
@@ -27,7 +28,9 @@ const FazerAnuncio = () => {
           className="m-auto mb-3"
         />
       </Link>
-      <div className="m-auto flex w-full max-w-sm flex-col gap-6"></div>
+      <div className="m-auto flex w-full max-w-sm flex-col gap-6">
+        <CadastroAnuncio usuarioId={session.user.id} />
+      </div>
     </main>
   );
 };

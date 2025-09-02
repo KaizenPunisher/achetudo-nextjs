@@ -82,12 +82,6 @@ const Gerenciador = () => {
                 Cadastrar Empresa
               </Link>
               <Link
-                href="/gerenciador"
-                className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
-              >
-                Fazer Anúncio
-              </Link>
-              <Link
                 href="/"
                 className="block rounded-lg bg-white p-4 text-center shadow-md hover:bg-gray-100"
               >
