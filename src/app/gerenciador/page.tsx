@@ -94,7 +94,7 @@ const Gerenciador = () => {
             <>
               <MostrarEmpresa busca={empresa} />
               <Link
-                href="/gerenciador"
+                href="/gerenciador/fazeranuncio"
                 className="block rounded-lg bg-yellow-300 p-4 text-center shadow-md hover:bg-yellow-400"
               >
                 Fazer Anúncio
