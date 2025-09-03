@@ -16,6 +16,7 @@ export const editarEmpresa = async (form: FormData) => {
         descricao: form.get("descricao") as string,
         abertura_horario: form.get("aberturaHorario") as string | null,
         fechamento_horario: form.get("fechamentoHorario") as string | null,
+        email: form.get("email") as string,
       })
       .where(eq(empresasTable.usuarioId, `${form.get("usuarioid")}`))
       .returning({ empresaid: empresasTable.id });

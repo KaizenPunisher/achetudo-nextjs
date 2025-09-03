@@ -31,6 +31,7 @@ const formSchema = z.object({
   descricao: z.string(),
   aberturaHorario: z.string().optional(),
   fechamentoHorario: z.string().optional(),
+  email: z.string().email("Email inválido"),
   endereco: z.string(),
   telefone: z.string(),
   usuarioid: z.string().uuid(),
@@ -54,6 +55,7 @@ type EmpresaResponse = {
     updatedAt: Date | null;
     remId: string | null;
     usuarioId: string;
+    email: string | null;
   };
   enderecos: {
     id: string;
@@ -98,6 +100,7 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
       endereco: "",
       telefone: "",
       usuarioid: usuarioId,
+      email: "",
       remid: process.env.NEXT_PUBLIC_TESTE_OG!,
     },
   });
@@ -122,6 +125,9 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
     }
     if (values.fechamentoHorario === "") {
       values.fechamentoHorario = empresa?.empresas.fechamento_horario as string;
+    }
+    if (values.email === "") {
+      values.email = empresa?.empresas.email as string;
     }
     if (values.endereco === "") {
       values.endereco = empresa?.enderecos.nome as string;
@@ -277,6 +283,24 @@ const EditarEmpresa = ({ usuarioId }: Props) => {
               <FormControl>
                 <Input
                   placeholder={`${empresa?.empresas.fechamento_horario}`}
+                  type="text"
+                  {...field}
+                />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="telefone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Telefone para contato</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder={`${empresa?.empresas.email}`}
                   type="text"
                   {...field}
                 />
