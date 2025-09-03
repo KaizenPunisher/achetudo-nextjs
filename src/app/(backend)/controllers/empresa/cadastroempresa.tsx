@@ -37,6 +37,7 @@ const formSchema = z.object({
   descricao: z.string(),
   aberturaHorario: z.string().optional(),
   fechamentoHorario: z.string().optional(),
+  email: z.string().email("Email inválido"),
   endereco: z.string().min(4, "Endereço deve ter pelo menos 4 caracteres"),
   telefone: z
     .string() // Changed from z.number()
@@ -63,6 +64,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
       descricao: "",
       aberturaHorario: "",
       fechamentoHorario: "",
+      email: "",
       endereco: "",
       telefone: "",
       usuarioid: usuarioId,
@@ -205,6 +207,20 @@ function CadastroEmpresa({ usuarioId }: Props) {
               <FormLabel>Horário de Fechamento da empresa ou serviço</FormLabel>
               <FormControl>
                 <Input placeholder="Exemplo: 18:00" type="text" {...field} />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email para contato</FormLabel>
+              <FormControl>
+                <Input placeholder="Digite o email" type="text" {...field} />
               </FormControl>
 
               <FormMessage />

@@ -27,8 +27,13 @@ const FazerAnuncio = () => {
           className="m-auto mb-3"
         />
       </Link>
-      <div className="m-auto flex w-full max-w-sm flex-col gap-6"></div>
+      <div className="m-auto flex w-full max-w-sm flex-col gap-6">
+        <h1 className="scroll-m-20 text-xl font-semibold tracking-tight">
+          Bem vindo ao Ache Tudo - Faça seu anúncio!
+        </h1>
+      </div>
     </main>
   );
 };
+
 export default FazerAnuncio;

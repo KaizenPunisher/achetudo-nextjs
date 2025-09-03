@@ -78,6 +78,7 @@ export const empresasTable = pgTable("empresas", {
   descricao: text("descricao").notNull(),
   abertura_horario: text("abertura_horario"),
   fechamento_horario: text("fechamento_horario"),
+  email: text("email"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()

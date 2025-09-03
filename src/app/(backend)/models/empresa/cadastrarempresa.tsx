@@ -15,6 +15,7 @@ export const cadastrarEmpresa = async (form: FormData) => {
         slug: form.get("nome") as string,
         abertura_horario: form.get("aberturaHorario") as string,
         fechamento_horario: form.get("fechamentoHorario") as string,
+        email: form.get("email") as string,
         descricao: form.get("descricao") as string,
         remId: process.env.NEXT_PUBLIC_TESTE_OG! as string,
         usuarioId: form.get("usuarioid") as string,
