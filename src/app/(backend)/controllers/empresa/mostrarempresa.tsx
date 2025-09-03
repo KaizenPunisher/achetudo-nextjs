@@ -16,6 +16,7 @@ interface EmpresaType {
     updatedAt: Date | null;
     remId: string | null;
     usuarioId: string;
+    email: string | null;
   };
   enderecos: {
     id: string;
@@ -74,8 +75,12 @@ const MostrarEmpresa = ({ busca }: MostrarEmpresaProps) => {
             <h5>{busca.enderecos.nome}</h5>
           </li>
           <li className="p-2">
-            <h3>Telefone</h3>
+            <h3>Telefone - Whatsapp</h3>
             <h5>{busca.telefones.nome}</h5>
+          </li>
+          <li className="p-2">
+            <h3>Email para contato</h3>
+            <h5>{busca.empresas.email}</h5>
           </li>
           <li>
             <Link

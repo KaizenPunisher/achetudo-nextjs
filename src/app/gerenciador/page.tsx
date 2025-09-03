@@ -24,6 +24,7 @@ type EmpresaResponse = {
     updatedAt: Date | null;
     remId: string | null;
     usuarioId: string;
+    email: string | null;
   };
   enderecos: {
     id: string;

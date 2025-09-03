@@ -60,11 +60,12 @@ const DeletarEmpresa = ({ empresaprop }: Props) => {
                 <FormDescription>
                   <p>
                     Digite <strong>DELETAR</strong>
+                    <label> - Isso apagará todos os anuncios</label>
                   </p>
                 </FormDescription>
                 <FormControl>
                   <Input
-                    placeholder="Isso apagará todos os anuncios"
+                    placeholder=""
                     type="text"
                     {...field}
                     className="border-1 border-red-600"
