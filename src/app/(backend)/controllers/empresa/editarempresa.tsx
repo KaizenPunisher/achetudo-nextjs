@@ -31,7 +31,7 @@ const formSchema = z.object({
   descricao: z.string(),
   aberturaHorario: z.string().optional(),
   fechamentoHorario: z.string().optional(),
-  email: z.string().email("Email inválido"),
+  email: z.string(),
   endereco: z.string(),
   telefone: z.string(),
   usuarioid: z.string().uuid(),

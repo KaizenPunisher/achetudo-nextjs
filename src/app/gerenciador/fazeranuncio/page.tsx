@@ -46,8 +46,8 @@ const FazerAnuncio = () => {
         <p>
           <strong>
             Para poder editar as fotos futuramente, será necessário assinar o
-            plano anual de suporte. no valor de R$70,00 podendo ter 5 edições
-            por mês.
+            plano mensal de suporte. no valor de R$6,00 podendo ter no máximo 3
+            edições por mês.
           </strong>
         </p>
         <p>
