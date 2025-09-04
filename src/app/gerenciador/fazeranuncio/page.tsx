@@ -46,7 +46,7 @@ const FazerAnuncio = () => {
         <p>
           <strong>
             Para poder editar as fotos futuramente, será necessário assinar o
-            plano mensal de suporte. no valor de R$6,00 podendo ter no máximo 3
+            plano mensal de suporte no valor de R$6,00 podendo ter no máximo 3
             edições por mês.
           </strong>
         </p>
@@ -56,7 +56,7 @@ const FazerAnuncio = () => {
         </p>
         <Link
           href="https://wa.me/5511951235344?text=Olá,%20quero%20contratar%20o%20anúncio"
-          className="text-amber-50"
+          className="text-white"
         >
           <Image
             alt="Whatsapp"

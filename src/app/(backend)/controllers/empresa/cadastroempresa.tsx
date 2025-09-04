@@ -37,7 +37,7 @@ const formSchema = z.object({
   descricao: z.string(),
   aberturaHorario: z.string().optional(),
   fechamentoHorario: z.string().optional(),
-  email: z.string().email("Email inválido"),
+  email: z.string(),
   endereco: z.string().min(4, "Endereço deve ter pelo menos 4 caracteres"),
   telefone: z
     .string() // Changed from z.number()

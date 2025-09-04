@@ -104,6 +104,8 @@ export const anunciosTable = pgTable("anuncios", {
   nome: text("nome").notNull(),
   tipo: text("tipo").notNull(),
   imagem1: text("imagem1").notNull(),
+  imagem2: text("imagem2").notNull(),
+  imagem3: text("imagem3").notNull(),
   precoEmCentavos: integer("preco_em_centavos"),
   descricao: text("descricao").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -183,6 +185,27 @@ export const categoriaTableRelations = relations(
   categoriasTable,
   ({ many }) => ({
     anuncios: many(anunciosTable),
+    categorias_v: many(categorias_vTable),
+  }),
+);
+export const categorias_vTable = pgTable("categorias_v", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  nome: text("nome").notNull(),
+  categoriaId: uuid("categoria_id")
+    .notNull()
+    .references(() => categoriasTable.id),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at")
+    .defaultNow()
+    .$onUpdate(() => new Date()),
+});
+export const categorias_vTableRelations = relations(
+  categorias_vTable,
+  ({ one }) => ({
+    categoriaId: one(categoriasTable, {
+      fields: [categorias_vTable.categoriaId],
+      references: [categoriasTable.id],
+    }),
   }),
 );
 
@@ -235,6 +258,31 @@ export const trsTableRelations = relations(trsTable, ({ one }) => ({
   }),
 }));
 
+export const ldsTable = pgTable("lds", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  ve: timestamp("ve").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at")
+    .defaultNow()
+    .$onUpdate(() => new Date()),
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresasTable.id),
+  remId: uuid("rem_id")
+    .notNull()
+    .references(() => remsTable.id),
+});
+export const ldsTableRelations = relations(ldsTable, ({ one }) => ({
+  empresa: one(empresasTable, {
+    fields: [ldsTable.empresaId],
+    references: [empresasTable.id],
+  }),
+  remId: one(remsTable, {
+    fields: [ldsTable.remId],
+    references: [remsTable.id],
+  }),
+}));
+
 export const remsTable = pgTable("rems", {
   id: uuid("id").defaultRandom().primaryKey(),
   o: text("o").notNull(),
@@ -248,4 +296,5 @@ export const remsTableRelations = relations(remsTable, ({ many }) => ({
   anuncios: many(anunciosTable),
   arks: many(arksTable),
   trs: many(trsTable),
+  lds: many(ldsTable),
 }));
