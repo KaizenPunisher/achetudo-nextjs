@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ImageTeste from "../../../public/715.webp";
 import ImageTeste2 from "../../../public/1.jpg";
 
 const ListarTodosAnuncios = () => {
@@ -33,7 +32,10 @@ const ListarTodosAnuncios = () => {
             </a>
             <Image
               alt="Teste"
-              src={ImageTeste}
+              width={0}
+              height={0}
+              sizes="100vw"
+              src="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg"
               className="relative m-auto mt-32 block h-80 w-70 border-2 border-black"
             />
             <div>
