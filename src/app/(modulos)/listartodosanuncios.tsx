@@ -1,6 +1,16 @@
 import Image from "next/image";
 import ImageTeste2 from "../../../public/1.jpg";
 
+import * as React from "react";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 const ListarTodosAnuncios = () => {
   return (
     <>
@@ -24,25 +34,40 @@ const ListarTodosAnuncios = () => {
             </h3>
           </a>
           <div
-            className="animate-fade-in-scale fixed top-0 left-0 -z-10 hidden h-0 w-0 overflow-hidden bg-white p-0 text-center opacity-0 target:z-40 target:block target:h-screen target:w-screen target:opacity-100"
+            className="animate-fade-in-scale fixed top-0 left-0 -z-10 hidden h-0 w-0 overflow-hidden border-2 border-black bg-white p-0 text-center opacity-0 target:z-40 target:block target:h-screen target:w-screen target:opacity-100"
             id="image-1"
           >
-            <a href="#principal" className="absolute z-50">
-              x FECHAR
-            </a>
-            <Image
-              alt="Teste"
-              width={0}
-              height={0}
-              sizes="100vw"
-              src="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg"
-              className="relative m-auto mt-32 block h-80 w-70 border-2 border-black"
-            />
+            <div className="relative block h-auto w-auto border-2 border-black pt-0">
+              <Carousel className="m-auto h-auto max-w-xs border-4 border-blue-500">
+                <CarouselContent>
+                  {Array.from({ length: 3 }).map((_, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="h-90 w-[840px] border-2 border-red-500"
+                    >
+                      <Image
+                        alt="Teste"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        src="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg"
+                        className="relative m-0 mt-0 block h-full w-full border-2 border-black"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-1" />
+                <CarouselNext className="right-1" />
+              </Carousel>
+            </div>
             <div>
               <h3>
                 Versão TESTE <span>/ 1.0 /</span>
               </h3>
               <p>Seu anuncio aqui !</p>
+              <a href="#principal" className="absolute z-50">
+                x FECHAR
+              </a>
             </div>
           </div>
         </li>
