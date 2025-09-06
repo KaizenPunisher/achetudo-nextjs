@@ -46,12 +46,6 @@ export default function RootLayout({
           content="https://www.achetudotiradentes.com.br"
         />
         <meta property="og:site_name" content="Ache Tudo Cidade Tiradentes" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ache Tudo Cidade Tiradentes" />
-        <meta
-          name="twitter:description"
-          content="Venha conhecer o centro comercial Cidade Tiradentes de maneira facil e rapida. Aqui você encontra todos os produtos e serviços ao alcance do seu Whatsapp"
-        />
       </head>
       <body className={`${comfortaa.className} antialiased`}>
         {children}
