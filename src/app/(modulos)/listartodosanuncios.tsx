@@ -35,7 +35,7 @@ const ListarTodosAnuncios = () => {
               <figure className="animate-slider absolute h-[100%] w-[100%] bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_2.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
               <figure className="animate-slider absolute h-[100%] w-[100%] bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_3.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
             </div>
-            <section className="absolute top-70 left-15 box-border h-auto w-70 rounded-2xl bg-white p-1 md:top-80 md:left-135">
+            <section className="font-comfortaa absolute top-70 left-15 box-border h-auto w-70 rounded-2xl bg-white p-1 md:top-80 md:left-135">
               <figure className="fixed top-71 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat pt-3 md:top-81 md:left-130">
                 <span className="text-center text-base text-white">
                   R$500,00
@@ -57,8 +57,8 @@ const ListarTodosAnuncios = () => {
                   rel="noopener noreferrer"
                 >
                   <figure className="float-left h-10 w-10 border-2 border-black bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/whatsapp.svg')] bg-size-[100%_100%] bg-center bg-no-repeat"></figure>
-                  <span className="float-left border-2 border-black pt-2 pl-2 text-gray-500">
-                    Fale agora conosco no whatsap
+                  <span className="float-left border-2 border-black pt-2 pl-2 text-green-700">
+                    <strong>Fale agora conosco no whatsapp</strong>
                   </span>
                   <span className="clear-both"></span>
                 </Link>
@@ -77,7 +77,7 @@ const ListarTodosAnuncios = () => {
               </div>
               <div className="h-auto w-auto border-4 border-black pt-1 pb-1">
                 <Link href="https://wa.me/5511951235344" target="_blank">
-                  <div className="box-border h-9 w-30 rounded-2xl bg-yellow-400 pt-2">
+                  <div className="box-border h-10 w-30 rounded-2xl bg-yellow-400 pt-3">
                     <span className="m-auto">Visite nosso site</span>
                   </div>
                 </Link>
