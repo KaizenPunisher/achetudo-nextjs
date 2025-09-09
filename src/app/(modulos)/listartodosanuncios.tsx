@@ -2,6 +2,7 @@ import Image from "next/image";
 import ImageTeste2 from "../../../public/1.jpg";
 
 import * as React from "react";
+import Link from "next/link";
 
 const ListarTodosAnuncios = () => {
   return (
@@ -34,19 +35,59 @@ const ListarTodosAnuncios = () => {
               <figure className="animate-slider absolute h-[100%] w-[100%] bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_2.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
               <figure className="animate-slider absolute h-[100%] w-[100%] bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_3.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
             </div>
-            <div className="absolute top-70 left-15 h-50 w-70 bg-white p-1 md:top-80 md:left-135">
-              <figure className="fixed top-71 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat p-4 md:top-81 md:left-130">
-                <span className="text-center text-white">R$100000</span>
+            <section className="absolute top-70 left-15 h-auto w-70 bg-white p-1 md:top-80 md:left-135">
+              <figure className="fixed top-71 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat pt-3 md:top-81 md:left-130">
+                <span className="text-center text-base text-white">
+                  R$500,00
+                </span>
               </figure>
-              <div className="h-13 w-full border-2 border-black"></div>
-              <h3>
-                Versão TESTE <span>/ 1.0 /</span>
-              </h3>
+              <div className="h-10 w-full border-2 border-black pt-2 pl-10">
+                <strong>Sites Landing Page</strong>
+              </div>
+              <div className="h-auto w-auto border-2 border-black p-1">
+                <h4>
+                  Marque presença na internet com um site profissional. Apareça
+                  no google sem esforço.
+                </h4>
+              </div>
+              <div className="h-10 w-auto border-2 border-black">
+                <Link
+                  href="https://wa.me/5511951235344"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <figure className="float-left h-10 w-10 border-2 border-black bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/whatsapp.svg')] bg-size-[100%_100%] bg-center bg-no-repeat"></figure>
+                  <span className="float-left border-2 border-black pt-2 pl-2 text-gray-500">
+                    Fale agora conosco no whatsap
+                  </span>
+                  <span className="clear-both"></span>
+                </Link>
+              </div>
+              <div className="h-7 w-auto border-2 border-black pt-1 pb-1">
+                <strong className="float-left pr-1">Empresa</strong>
+                <span className="float-left text-gray-500">- Dio Santos</span>
+                <span className="clear-both"></span>
+              </div>
+              <div className="h-7 w-auto border-2 border-black pt-1 pb-1">
+                <strong className="float-left pr-1">Funcionamento</strong>
+                <span className="float-left text-gray-500">
+                  - Das 9:00 às 18:00
+                </span>
+                <span className="clear-both"></span>
+              </div>
+              <div className="h-auto w-auto border-4 border-black pt-1 pb-1">
+                <Link href="https://wa.me/5511951235344" target="_blank">
+                  <div className="h-9 w-30 bg-yellow-400 pt-2">
+                    <span className="m-auto">Visite nosso site</span>
+                  </div>
+                </Link>
+              </div>
+
               <p>Seu anuncio aqui !</p>
               <a href="#principal" className="absolute z-50">
                 x FECHAR
               </a>
-            </div>
+            </section>
           </div>
         </li>
         <li className="relative float-left m-0">
