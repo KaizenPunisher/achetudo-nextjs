@@ -115,6 +115,7 @@
 }
 
 @theme {
+  --animate-slider: animacao-1 30s infinite;
   --font-inter: "Inter", sans-serif;
   --breakpoint-sm: 24rem;
   --animate-fade-in-scale: fade-in-scale 1s ease-out;
@@ -126,6 +127,21 @@
     100% {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes animacao-1 {
+    1%,
+    5% {
+      opacity: 0;
+    }
+    10%,
+    40% {
+      opacity: 1;
+    }
+    55%,
+    100% {
+      opacity: 0;
     }
   }
 }
