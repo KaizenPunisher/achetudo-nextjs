@@ -14,34 +14,34 @@ const ListarTodosAnuncios = () => {
           >
             <Image
               alt="Teste"
-              src="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg"
+              src="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncios/d7026cdf-8c46-413e-8989-c15712e81520/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg"
               width={0}
               height={0}
               sizes="100vw"
               priority={false}
               className="absolute h-full w-full"
             />
-            <h3 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">
-              Mercadinho Familia
+            <h3 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 pt-1 pr-2 pl-2 wrap-break-word">
+              Landing Page Profissional - R$500,00
             </h3>
           </a>
           <div
             className="animate-fade-in-scale fixed top-0 left-0 -z-10 box-border hidden h-0 w-0 overflow-hidden rounded-b-2xl bg-yellow-300 p-0 text-center opacity-0 target:z-40 target:block target:h-full target:w-screen target:opacity-100"
             id="image-1"
           >
-            <div className="relative m-auto box-border block h-80 w-screen rounded-2xl pt-0 shadow-xl/30 md:h-90 md:w-110">
-              <figure className="absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat"></figure>
-              <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_2.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
-              <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_3.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
+            <div className="relative m-auto box-border block h-100 w-screen rounded-2xl pt-0 shadow-xl/30 md:h-90 md:w-110">
+              <figure className="absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncios/d7026cdf-8c46-413e-8989-c15712e81520/d7026cdf-8c46-413e-8989-c15712e81520_1.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat"></figure>
+              <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncios/d7026cdf-8c46-413e-8989-c15712e81520/d7026cdf-8c46-413e-8989-c15712e81520_2.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
+              <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncios/d7026cdf-8c46-413e-8989-c15712e81520/d7026cdf-8c46-413e-8989-c15712e81520_3.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
             </div>
-            <section className="font-comfortaa absolute top-70 left-15 box-border h-auto w-70 rounded-2xl bg-white p-3 md:top-80 md:left-135">
-              <figure className="fixed top-71 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat pt-3 md:top-81 md:left-129">
+            <section className="font-comfortaa absolute top-90 left-15 box-border h-auto w-70 rounded-2xl bg-white p-3 md:top-80 md:left-135">
+              <figure className="fixed top-91 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat pt-3 md:top-81 md:left-129">
                 <span className="text-center text-base text-white">
                   R$500,00
                 </span>
               </figure>
-              <div className="h-10 w-full pt-2 pl-14">
-                <strong>Sites Landing Page</strong>
+              <div className="h-10 w-full pt-1 pl-20">
+                <strong>Tenha um Site</strong>
               </div>
               <div className="h-auto w-auto">
                 <h4>
