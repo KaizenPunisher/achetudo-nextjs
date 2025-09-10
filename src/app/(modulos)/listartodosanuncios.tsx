@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ImageTeste2 from "../../../public/1.jpg";
 
 import * as React from "react";
 import Link from "next/link";
@@ -36,12 +35,12 @@ const ListarTodosAnuncios = () => {
               <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/anuncio/d7026cdf-8c46-413e-8989-c15712e81520_3.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
             </div>
             <section className="font-comfortaa absolute top-70 left-15 box-border h-auto w-70 rounded-2xl bg-white p-3 md:top-80 md:left-135">
-              <figure className="fixed top-71 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat pt-3 md:top-81 md:left-130">
+              <figure className="fixed top-71 left-9 h-15 w-30 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/tarja.svg')] bg-size-[100%_100%] bg-center bg-no-repeat pt-3 md:top-81 md:left-129">
                 <span className="text-center text-base text-white">
                   R$500,00
                 </span>
               </figure>
-              <div className="h-10 w-full pt-2 pl-10">
+              <div className="h-10 w-full pt-2 pl-14">
                 <strong>Sites Landing Page</strong>
               </div>
               <div className="h-auto w-auto">
@@ -56,9 +55,11 @@ const ListarTodosAnuncios = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <figure className="float-left h-10 w-10 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/whatsapp.svg')] bg-size-[100%_100%] bg-center bg-no-repeat"></figure>
+                  <figure className="float-left h-10 w-6 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/whatsapp.svg')] bg-size-[100%_100%] bg-center bg-no-repeat"></figure>
                   <span className="float-left pt-3 pl-1 text-green-700">
-                    <strong>Fale agora conosco no whatsapp</strong>
+                    <strong className="box-border rounded-2xl bg-green-600 p-2 text-xs text-white shadow-lg/30">
+                      Fale agora conosco no whatsapp
+                    </strong>
                   </span>
                   <span className="clear-both"></span>
                 </Link>
@@ -76,60 +77,23 @@ const ListarTodosAnuncios = () => {
                 <span className="clear-both"></span>
               </div>
               <div className="float-start h-auto w-full pt-1 pb-1">
-                <Link
-                  href="https://wa.me/5511951235344"
-                  target="_blank"
-                  className="float-left"
-                >
-                  <div className="box-border h-10 w-25 rounded-2xl bg-yellow-400 pt-3">
-                    <span className="m-auto">Nosso site</span>
-                  </div>
-                </Link>
-                <a href="#principal" className="float-right">
-                  <div className="box-border h-10 w-25 rounded-2xl bg-black pt-3 text-white">
+                <a href="#principal" className="float-left">
+                  <div className="box-border h-10 w-25 rounded-2xl bg-gray-300 pt-3 text-black shadow-lg/25">
                     <span className="m-auto">Fechar</span>
                   </div>
                 </a>
                 <span className="clear-both"></span>
+                <Link
+                  href="https://wa.me/5511951235344"
+                  target="_blank"
+                  className="float-right"
+                >
+                  <div className="box-border h-10 w-25 rounded-2xl bg-yellow-400 pt-3 shadow-lg/25">
+                    <span className="m-auto">Nosso site</span>
+                  </div>
+                </Link>
               </div>
             </section>
-          </div>
-        </li>
-        <li className="relative float-left m-0">
-          <a
-            href="#image-2"
-            className="relative z-0 block h-40 w-40 sm:h-43 sm:w-43 md:h-45 md:w-45 lg:h-51 lg:w-51"
-          >
-            <Image
-              alt="Teste"
-              src={ImageTeste2}
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="absolute h-full w-full"
-            />
-            <h1 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 p-2 wrap-break-word">
-              Boné Preto ótima qualidade
-            </h1>
-          </a>
-          <div
-            className="animate-fade-in-scale fixed top-0 left-0 -z-10 hidden h-0 w-0 overflow-hidden bg-white p-0 text-center opacity-0 target:z-40 target:block target:h-screen target:w-screen target:opacity-100"
-            id="image-2"
-          >
-            <a href="#principal" className="absolute z-50">
-              x FECHAR
-            </a>
-            <Image
-              alt="Teste"
-              src={ImageTeste2}
-              className="relative m-auto mt-32 block h-80 w-70"
-            />
-            <div>
-              <h3>
-                Versão TESTE <span>/ 1.0 /</span>
-              </h3>
-              <p>Seu anuncio aqui !</p>
-            </div>
           </div>
         </li>
       </ul>
