@@ -36,7 +36,8 @@ const FazerAnuncio = () => {
         </p>
         <p>
           Cada anuncio terá um custo mensal de R$5,00 para custear a manutenção
-          da plataforma e hospedagem das imagens
+          da plataforma e hospedagem das imagens. O pagamento será dentro de um
+          plano anual de R$60,00.
         </p>
         <p>Serão 3 fotos com uma descrição breve</p>
         <p>
@@ -46,7 +47,7 @@ const FazerAnuncio = () => {
         <p>
           <strong>
             Para poder editar as fotos futuramente, será necessário assinar o
-            plano mensal de suporte no valor de R$6,00 podendo ter no máximo 3
+            plano anual de suporte no valor de R$72,00 podendo ter no máximo 3
             edições por mês.
           </strong>
         </p>
