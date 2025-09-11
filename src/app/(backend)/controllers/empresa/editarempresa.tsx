@@ -46,9 +46,9 @@ type EmpresaResponse = {
   empresas: {
     id: string;
     nome: string;
-    documento: string;
-    tipo: string;
-    descricao: string;
+    documento: string | null;
+    tipo: string | null;
+    descricao: string | null;
     abertura_horario: string | null;
     fechamento_horario: string | null;
     createdAt: Date;

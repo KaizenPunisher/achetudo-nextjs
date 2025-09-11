@@ -13,10 +13,10 @@ type EmpresaResponse = {
   empresas: {
     id: string;
     nome: string;
-    documento: string;
-    tipo: string;
+    documento: string | null;
+    tipo: string | null;
     slug: string | null;
-    descricao: string;
+    descricao: string | null;
     createdAt: Date;
     updatedAt: Date | null;
     remId: string | null;

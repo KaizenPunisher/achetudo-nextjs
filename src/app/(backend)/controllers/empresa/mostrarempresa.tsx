@@ -6,10 +6,10 @@ interface EmpresaType {
   empresas: {
     id: string;
     nome: string;
-    documento: string;
-    tipo: string;
+    documento: string | null;
+    tipo: string | null;
     slug: string | null;
-    descricao: string;
+    descricao: string | null;
     abertura_horario: string | null;
     fechamento_horario: string | null;
     createdAt: Date;
