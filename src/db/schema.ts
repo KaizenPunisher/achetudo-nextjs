@@ -73,7 +73,7 @@ export const empresasTable = pgTable("empresas", {
   id: uuid("id").defaultRandom().primaryKey(),
   nome: text("nome").notNull(),
   tipo: text("tipo").notNull(),
-  documento: text("documento").notNull(),
+  documento: text("documento"),
   slug: text("slug").unique(),
   descricao: text("descricao").notNull(),
   abertura_horario: text("abertura_horario"),
@@ -117,7 +117,7 @@ export const anunciosTable = pgTable("anuncios", {
     .references(() => categoriasTable.id),
   empresaId: uuid("empresa_id")
     .notNull()
-    .references(() => empresasTable.id),
+    .references(() => empresasTable.id, { onDelete: "cascade" }),
   remId: uuid("rem_id")
     .notNull()
     .references(() => remsTable.id),

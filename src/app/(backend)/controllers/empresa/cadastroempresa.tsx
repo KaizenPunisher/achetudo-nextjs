@@ -28,11 +28,7 @@ import Link from "next/link";
 const formSchema = z.object({
   nome: z.string().min(2, "Campo não pode ficar vazio").max(100),
   tipo: z.string(),
-  documento: z
-    .string() // Changed from z.number()
-    .min(11, "Deve ter 11 dígitos e somente numeros")
-    .max(11, "Deve ter 11 dígitos e somente numeros")
-    .transform((val) => val.replace(/\D/g, "")),
+  documento: z.string().transform((val) => val.replace(/\D/g, "")),
   slug: z.string(),
   descricao: z.string(),
   aberturaHorario: z.string().optional(),
@@ -137,7 +133,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
             name="documento"
             render={({ field }) => (
               <FormItem id="cnpj">
-                <FormLabel>CNPJ</FormLabel>
+                <FormLabel>CNPJ (OPCIONAL)</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Digite o CNPJ da Empresa"
@@ -157,7 +153,7 @@ function CadastroEmpresa({ usuarioId }: Props) {
             name="documento"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>CPF</FormLabel>
+                <FormLabel>CPF (OPCIONAL)</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Digite o seu CPF"
