@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/logo.png";
+import Logo from "../../public/logo.svg";
 import Saudacao from "./(componentes)/mensagensdosistema/saudacao";
 import BotaoAnunciar from "./(componentes)/botoes/anunciar";
 import ListarTodosAnuncios from "./(modulos)/listartodosanuncios";
