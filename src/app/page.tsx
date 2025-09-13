@@ -19,8 +19,9 @@ export default function Home() {
           </h4>
         </div>
         <div className="m-auto w-81">
-          <Link href="/" className="float-left m-auto" id="logo">
+          <Link href="/achetudo" className="float-left m-auto" id="logo">
             <Image
+              priority={false}
               alt="Ache Tudo Logo"
               src={Logo}
               width={80}
