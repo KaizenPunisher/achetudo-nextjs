@@ -1,7 +1,7 @@
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/logo.svg";
 import TesteForm from "../(modulos)/teste";
 
 const Teste = () => {

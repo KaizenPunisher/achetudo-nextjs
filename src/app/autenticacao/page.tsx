@@ -3,7 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/logo.svg";
 import EntrarForm from "../(modulos)/entrar";
 import CadastroForm from "../(modulos)/cadastro";
 import { authClient } from "@/lib/auth-client";

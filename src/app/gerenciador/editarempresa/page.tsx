@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../../public/logo.png";
+import Logo from "../../../../public/logo.svg";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import EditarEmpresa from "@/app/(backend)/controllers/empresa/editarempresa";
