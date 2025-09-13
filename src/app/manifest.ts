@@ -4,16 +4,16 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Ache Tudo",
     short_name: "AcheTudo",
-    description: "A Progressive Web App built with Next.js",
+    description: "Centro comercial Cidade Tiradentes",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#000000",
     icons: [
       {
-        src: "../../public/logo.svg",
+        src: "../../public/logo.png",
         sizes: "192x192",
-        type: "image/svg",
+        type: "image/png",
       },
     ],
   };

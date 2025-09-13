@@ -3,21 +3,22 @@
 import Image from "next/image";
 import Logo from "../../../../public/logo.svg";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function AcheTudo() {
+  const [animateCelularUp, setAnimateCelularUp] = useState("");
   useEffect(() => {
     const rolagem = () => {
       const value = window.scrollY;
       const celular = document.getElementById("celular");
       if (value >= 100) {
         if (celular) {
-          celular.style.top = "0px";
+          setAnimateCelularUp("animate-celular-up");
         }
       }
       if (value == 0) {
         if (celular) {
-          celular.style.top = "440px";
+          setAnimateCelularUp("animate-celular-down");
         }
       }
     };
@@ -52,7 +53,7 @@ export default function AcheTudo() {
             </ul>
             <div
               id="celular"
-              className="fixed top-110 left-[35%] h-50 w-30 border-2 border-black"
+              className={`fixed top-110 left-[35%] h-50 w-30 border-2 border-black ${animateCelularUp}`}
             ></div>
           </div>
           <figure className="h-full w-full bg-blue-900"></figure>
