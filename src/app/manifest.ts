@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Centro comercial Cidade Tiradentes",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
+    background_color: "#B1E8F3",
     theme_color: "#000000",
     icons: [
       {
