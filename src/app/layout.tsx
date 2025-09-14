@@ -16,12 +16,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PWA NextJS",
+  title: "Ache Tudo",
   description: "Conheça o centro comercial da Cidade Tiradentes aqui",
   generator: "Next.js",
   manifest: "/manifest.json",
   keywords: ["nextjs", "next14", "pwa", "next-pwa"],
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
   authors: [
     {
       name: "Kaizen",
