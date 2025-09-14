@@ -2,6 +2,7 @@
 import { Comfortaa, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { Metadata } from "next/types";
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
@@ -13,6 +14,27 @@ const inter = Inter({
   weight: ["400", "600", "700"],
   variable: "--font-inter",
 });
+
+export const metadata: Metadata = {
+  title: "PWA NextJS",
+  description: "Conheça o centro comercial da Cidade Tiradentes aqui",
+  generator: "Next.js",
+  manifest: "/manifest.json",
+  keywords: ["nextjs", "next14", "pwa", "next-pwa"],
+  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
+  authors: [
+    {
+      name: "Kaizen",
+      url: "https://github.com/KaizenPunisher/",
+    },
+  ],
+  viewport:
+    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
+  icons: [
+    { rel: "apple-touch-icon", url: "icons/icon-128x128.png" },
+    { rel: "icon", url: "icons/icon-128x128.png" },
+  ],
+};
 /*
 export const metadata: Metadata = {
   title: "Ache Tudo",

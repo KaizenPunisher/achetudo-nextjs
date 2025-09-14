@@ -53,7 +53,7 @@ export default function AcheTudo() {
             </ul>
             <div
               id="celular"
-              className={`fixed top-110 left-[35%] z-10 h-50 w-30 border-2 border-black ${animateCelularUp}`}
+              className={`fixed top-110 left-[35%] z-20 h-50 w-30 border-2 border-black ${animateCelularUp}`}
             ></div>
           </div>
           <div className="relative z-[-1] h-full w-full border-3 border-white">
