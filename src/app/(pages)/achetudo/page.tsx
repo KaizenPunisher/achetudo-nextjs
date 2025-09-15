@@ -41,11 +41,8 @@ export default function AcheTudo() {
 
   return (
     <>
-      <header
-        id="header"
-        className={`containter relative border-2 border-black ${animateHeader}`}
-      >
-        <div className="h-130 w-full overflow-hidden rounded-b-full border-8 border-red-700">
+      <header id="header" className={`containter relative ${animateHeader}`}>
+        <div className="h-130 w-full overflow-hidden rounded-b-full shadow-lg/30">
           <div
             id="menu"
             className="fixed top-0 left-0 float-start box-border h-25 w-full justify-center rounded-3xl border-white bg-white p-2"
@@ -69,23 +66,23 @@ export default function AcheTudo() {
             </ul>
             <div
               id="celular"
-              className={`fixed top-110 left-[35%] z-20 h-50 w-29 border-2 border-black pt-4 pl-4 ${animateCelular}`}
+              className={`fixed top-110 left-[35%] z-20 h-50 w-29 pt-4 pl-2 ${animateCelular} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/celular.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat`}
             >
-              <figure className="absolute m-auto h-40 w-20 bg-blue-900"></figure>
-              <figure className="animate-slider absolute m-auto h-40 w-20 bg-green-900 opacity-0 transition-opacity delay-4000"></figure>
-              <figure className="animate-slider absolute m-auto h-40 w-20 bg-yellow-500 opacity-0 transition-opacity delay-10000"></figure>
+              <figure className="absolute m-auto h-40 w-24 bg-blue-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-1rem_0rem] bg-no-repeat"></figure>
+              <figure className="animate-slider absolute m-auto h-40 w-24 bg-green-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-1rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
+              <figure className="animate-slider absolute m-auto h-40 w-24 bg-yellow-500 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[0rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
               <div className="clear-both"></div>
             </div>
           </div>
-          <div className="relative z-[-1] h-full w-full border-3 border-white">
-            <figure className="absolute h-full w-full bg-blue-900"></figure>
-            <figure className="animate-slider absolute h-full w-full bg-green-900 opacity-0 transition-opacity delay-4000"></figure>
-            <figure className="animate-slider absolute h-full w-full bg-yellow-500 opacity-0 transition-opacity delay-10000"></figure>
+          <div className="relative z-[-1] h-full w-full">
+            <figure className="absolute h-full w-full bg-blue-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat"></figure>
+            <figure className="animate-slider absolute h-full w-full bg-green-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-5rem_4rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
+            <figure className="animate-slider absolute h-full w-full bg-yellow-500 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[-2rem_1rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
           </div>
           <div className="clear-both"></div>
         </div>
       </header>
-      <section className="relative top-[-190px] z-[-2] h-150 w-full bg-amber-700"></section>
+      <section className="relative top-[-190px] z-[-2] h-160 w-full bg-amber-700"></section>
     </>
   );
 }

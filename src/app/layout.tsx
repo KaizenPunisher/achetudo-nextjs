@@ -20,7 +20,15 @@ export const metadata: Metadata = {
   description: "Conheça o centro comercial da Cidade Tiradentes aqui",
   generator: "Next.js",
   manifest: "/manifest.json",
-  keywords: ["nextjs", "next14", "pwa", "next-pwa"],
+  keywords: [
+    "Ache Tudo",
+    "Cidade Tiradentes",
+    "Ache Tudo Cidade Tiradentes",
+    "Ache Tudo Tiradentes",
+    "Comércio Tiradentes",
+    "Comércio local Tiradentes",
+    "Ache Tudo e Região",
+  ],
   authors: [
     {
       name: "Kaizen",
@@ -34,13 +42,7 @@ export const metadata: Metadata = {
     { rel: "icon", url: "icons/icon-128x128.png" },
   ],
 };
-/*
-export const metadata: Metadata = {
-  title: "Ache Tudo",
-  description:
-    "Sistema Web Mobile com objetivo de centralizar informações de comercios locais. Visando a facilidade de pesquisa de produtos e serviços em centros comerciais.",
-};
-*/
+
 export default function RootLayout({
   children,
 }: Readonly<{
