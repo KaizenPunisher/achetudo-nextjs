@@ -114,6 +114,22 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply font-sans text-black;
+    @apply bg-yellow-300;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold text-black;
+  }
+}
+
 @theme {
   --font-comfortaa: "Comfortaa", cursive;
   --font-inter: "Inter", sans-serif;
@@ -219,20 +235,77 @@
       top: 440px;
     }
   }
-}
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+  --animate-header-up: animacao-header-up 0.6s forwards;
+  --animate-header-down: animacao-header-down 0.6s forwards;
+  @keyframes animacao-header-up {
+    0% {
+      top: 0px;
+    }
+    10% {
+      top: -52px;
+    }
+    20% {
+      top: -104px;
+    }
+    30% {
+      top: -156px;
+    }
+    40% {
+      top: -208px;
+    }
+    50% {
+      top: -260px;
+    }
+    60% {
+      top: -312px;
+    }
+    70% {
+      top: -364px;
+    }
+    80% {
+      top: -416px;
+    }
+    90% {
+      top: -468px;
+    }
+    100% {
+      top: -520px;
+    }
   }
-  body {
-    @apply bg-background text-foreground;
-    @apply font-sans text-black;
-    @apply bg-yellow-300;
-  }
-  h1,
-  h2,
-  h3 {
-    @apply font-bold text-black;
+  @keyframes animacao-header-down {
+    0% {
+      top: -520px;
+    }
+    10% {
+      top: -468px;
+    }
+    20% {
+      top: -416px;
+    }
+    30% {
+      top: -364px;
+    }
+    40% {
+      top: -312px;
+    }
+    50% {
+      top: -260px;
+    }
+    60% {
+      top: -208px;
+    }
+    70% {
+      top: -156px;
+    }
+    80% {
+      top: -104px;
+    }
+    90% {
+      top: -52px;
+    }
+    100% {
+      top: 0px;
+    }
   }
 }
