@@ -26,12 +26,12 @@ export default function AcheTudo() {
         }
       }
 
-      if (value >= 150) {
+      if (value >= 100) {
         if (header) {
           setAnimateHeader("animate-header-up");
         }
       }
-      if (value == 0) {
+      if (value <= 0) {
         setAnimateHeader("animate-header-down");
       }
     };
@@ -48,7 +48,9 @@ export default function AcheTudo() {
             className="fixed top-0 left-0 float-start box-border h-25 w-full justify-center rounded-3xl border-white bg-white p-2"
           >
             <ul className="grid h-auto grid-cols-3 text-center text-xs">
-              <li className="text-xm m-auto border-2 border-black">PRODUTOS</li>
+              <li className="text-xm m-auto border-2 border-black">
+                VANTAGENS
+              </li>
               <li className="text-xm m-auto border-2 border-black">
                 <Link href="/" target="_self" className="float-right">
                   <figure className="m-auto w-auto border-2 border-blue-900">
@@ -62,27 +64,64 @@ export default function AcheTudo() {
                   </figure>
                 </Link>
               </li>
-              <li className="text-xm m-auto border-2 border-black">LOJAS</li>
+              <li className="text-xm m-auto border-2 border-black">COMPRAR</li>
             </ul>
             <div
               id="celular"
               className={`fixed top-110 left-[35%] z-20 h-50 w-29 pt-4 pl-2 ${animateCelular} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/celular.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat`}
             >
-              <figure className="absolute m-auto h-40 w-24 bg-blue-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-1rem_0rem] bg-no-repeat"></figure>
-              <figure className="animate-slider absolute m-auto h-40 w-24 bg-green-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-1rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
-              <figure className="animate-slider absolute m-auto h-40 w-24 bg-yellow-500 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[0rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
+              <figure className="absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-1rem_0rem] bg-no-repeat"></figure>
+              <figure className="animate-slider absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-1rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
+              <figure className="animate-slider absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[0rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
               <div className="clear-both"></div>
             </div>
           </div>
-          <div className="relative z-[-1] h-full w-full">
-            <figure className="absolute h-full w-full bg-blue-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat"></figure>
-            <figure className="animate-slider absolute h-full w-full bg-green-900 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-5rem_4rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
-            <figure className="animate-slider absolute h-full w-full bg-yellow-500 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[-2rem_1rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
+          <div className="relative z-[-1] h-full w-full bg-white">
+            <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat"></figure>
+            <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-5rem_4rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
+            <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[-2rem_1rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
           </div>
           <div className="clear-both"></div>
         </div>
       </header>
-      <section className="relative top-[-190px] z-[-2] h-160 w-full bg-amber-700"></section>
+      <section className="relative top-[-190px] z-[-2] mb-[-190px] h-auto w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
+        <div className="w-full pt-20 pb-5 pl-5">
+          <span className="m-auto justify-center font-bold text-blue-950 text-shadow-lg">
+            Quais as vantagens em ter um site ?
+          </span>
+        </div>
+        <div className="h-113 pt-2 pr-0 pb-0 pl-2">
+          <div className="h-auto pr-2 pb-2">
+            <div className="float-left w-40 justify-center rounded-3xl border-1 border-blue-400 p-2 text-center backdrop-blur-sm">
+              <span>
+                Apareça nas pesquisa do google e localização google maps.
+              </span>
+            </div>
+            <div className="float-right w-40 justify-center rounded-3xl border-1 border-blue-400 p-2 text-center backdrop-blur-sm">
+              <span>
+                Tenha o contato do cliente diretamente por email ou Whatsapp.
+              </span>
+            </div>
+            <div className="clear-both"></div>
+          </div>
+          <div className="h-auto pr-2 pb-2">
+            <div className="float-left w-40 rounded-3xl border-1 border-blue-400 p-2 text-center backdrop-blur-sm">
+              <span>
+                Sua loja e produtos viram um cartão de visita virtual na
+                internet.
+              </span>
+            </div>
+            <div className="float-right h-35 w-40 rounded-3xl border-1 border-blue-400 p-2 text-center backdrop-blur-sm">
+              <span>
+                Mostre sua loja ou produto nas redes sociais usando o site.
+              </span>
+            </div>
+            <div className="clear-both"></div>
+          </div>
+          <div className="relative top-[-50px] z-[-1] clear-both m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
+        </div>
+      </section>
+      <section className="h-100 w-full border-5 border-blue-900"></section>
     </>
   );
 }
