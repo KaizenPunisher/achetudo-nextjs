@@ -45,7 +45,7 @@ export default function AcheTudo() {
         <div className="h-130 w-full overflow-hidden rounded-b-full shadow-lg/30">
           <div
             id="menu"
-            className="fixed top-0 left-0 float-start box-border h-25 w-full justify-center rounded-3xl border-white bg-white p-2"
+            className="fixed top-0 left-0 float-start box-border h-25 w-full justify-center rounded-b-3xl border-white bg-white p-2"
           >
             <ul className="grid h-auto grid-cols-3 text-center text-xs">
               <li className="text-xm m-auto border-2 border-black">
