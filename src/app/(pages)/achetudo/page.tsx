@@ -8,12 +8,15 @@ import { useEffect, useState } from "react";
 export default function AcheTudo() {
   const [animateCelular, setAnimateCelular] = useState("");
   const [animateHeader, setAnimateHeader] = useState("");
+  const [animateMenu, setAnimateMenu] = useState("");
 
   useEffect(() => {
     const rolagem = () => {
       const value = window.scrollY;
       const celular = document.getElementById("celular");
       const header = document.getElementById("header");
+
+      console.log(value);
 
       if (value >= 100) {
         if (celular) {
@@ -34,6 +37,15 @@ export default function AcheTudo() {
       if (value <= 0) {
         setAnimateHeader("animate-header-down");
       }
+
+      if (value >= 300) {
+        if (header) {
+          setAnimateMenu("animate-menu-up");
+        }
+      }
+      if (value <= 250) {
+        setAnimateMenu("animate-menu-down");
+      }
     };
 
     window.addEventListener("scroll", rolagem);
@@ -45,21 +57,20 @@ export default function AcheTudo() {
         <div className="h-130 w-full overflow-hidden rounded-b-full shadow-lg/30">
           <div
             id="menu"
-            className="fixed top-0 left-0 z-20 float-start box-border h-25 w-full justify-center rounded-b-3xl border-white bg-white p-2"
+            className={`fixed top-0 left-0 z-20 float-start box-border h-25 w-full justify-center rounded-b-3xl border-white bg-white p-2 ${animateMenu}`}
           >
             <ul className="grid h-auto grid-cols-3 text-center text-xs">
-              <li className="text-xm m-auto border-2 border-black">
-                VANTAGENS
-              </li>
-              <li className="text-xm m-auto border-2 border-black">
+              <a href="#vantagens " className="m-auto">
+                <li className="text-xm m-auto">VANTAGENS</li>
+              </a>
+              <li className="text-xm m-auto">
                 <Link href="/" target="_self" className="float-right">
-                  <figure className="m-auto w-auto border-2 border-blue-900">
+                  <figure className="m-auto w-auto">
                     <Image
                       priority={false}
                       alt="Ache Tudo Logo"
                       src={Logo}
                       width={80}
-                      className="border-2"
                     />
                   </figure>
                 </Link>
@@ -85,7 +96,7 @@ export default function AcheTudo() {
         </div>
       </header>
       <section className="relative top-[-190px] z-[-2] h-auto w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
-        <div className="w-full pt-25 pb-5 pl-9">
+        <div className="w-full pt-30 pb-5 pl-9" id="vantagens">
           <span className="font-bold text-blue-950 text-shadow-lg">
             Quais as vantagens em ter um site ?
           </span>
