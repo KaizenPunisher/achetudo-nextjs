@@ -16,8 +16,6 @@ export default function AcheTudo() {
       const celular = document.getElementById("celular");
       const header = document.getElementById("header");
 
-      console.log(value);
-
       if (value >= 100) {
         if (celular) {
           setAnimateCelular("animate-celular-up");
