@@ -10,6 +10,7 @@ export default function AcheTudo() {
   const [animateHeader, setAnimateHeader] = useState("");
   const [animateMenu, setAnimateMenu] = useState("");
   const [animateFooter, setAnimateFooter] = useState("");
+  const [footerOn, setFooterOn] = useState(false);
 
   useEffect(() => {
     const rolagem = () => {
@@ -17,12 +18,12 @@ export default function AcheTudo() {
       const celular = document.getElementById("celular");
       const header = document.getElementById("header");
 
-      if (value >= 100) {
+      if (value >= 58) {
         if (celular) {
           setAnimateCelular("animate-celular-up");
         }
       }
-      if (value == 0) {
+      if (value === 0) {
         if (celular) {
           setAnimateCelular("animate-celular-down");
         }
@@ -37,27 +38,33 @@ export default function AcheTudo() {
         setAnimateHeader("animate-header-down");
       }
 
-      if (value >= 300) {
+      if (value >= 230) {
         if (header) {
           setAnimateMenu("animate-menu-up");
         }
       }
-      if (value <= 100) {
+      if (value <= 0) {
         setAnimateMenu("animate-menu-down");
       }
 
       if (value > 400) {
         if (header) {
-          setAnimateFooter("animate-footer-up");
+          setFooterOn(true);
         }
       }
-      if (value === 400) {
-        setAnimateFooter("animate-footer-down");
+      if (value <= 400) {
+        setFooterOn(false);
       }
     };
 
+    if (footerOn == true) {
+      setAnimateFooter("animate-footer-up");
+    } else {
+      setAnimateFooter("animate-footer-down");
+    }
+
     window.addEventListener("scroll", rolagem);
-  }, []);
+  }, [footerOn]);
 
   return (
     <>
@@ -139,7 +146,7 @@ export default function AcheTudo() {
         </div>
       </section>
       <footer
-        className={`absolute top-210 h-screen w-screen border-5 border-blue-900 bg-amber-300 ${animateFooter}`}
+        className={`absolute top-900 h-screen w-screen border-5 border-blue-900 bg-amber-300 ${animateFooter}`}
       >
         <div className="h-20 border-1 border-black pt-5 pb-2 pl-22">
           <h1 className="text-2xl">Quanto custa ?</h1>
