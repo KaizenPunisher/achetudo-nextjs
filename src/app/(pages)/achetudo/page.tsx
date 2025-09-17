@@ -9,7 +9,7 @@ export default function AcheTudo() {
   const [animateCelular, setAnimateCelular] = useState("");
   const [animateHeader, setAnimateHeader] = useState("");
   const [animateMenu, setAnimateMenu] = useState("");
-  const [animateFooter, setAnimateFooter] = useState("");
+  //const [animateFooter, setAnimateFooter] = useState("");
 
   useEffect(() => {
     const rolagem = () => {
@@ -45,7 +45,7 @@ export default function AcheTudo() {
       if (value <= 250) {
         setAnimateMenu("animate-menu-down");
       }
-
+      /*
       if (value >= 400) {
         if (header) {
           setAnimateFooter("animate-footer-up");
@@ -54,6 +54,7 @@ export default function AcheTudo() {
       if (value <= 350) {
         setAnimateFooter("animate-footer-down");
       }
+        */
     };
 
     window.addEventListener("scroll", rolagem);
