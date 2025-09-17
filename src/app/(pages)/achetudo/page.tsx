@@ -9,6 +9,7 @@ export default function AcheTudo() {
   const [animateCelular, setAnimateCelular] = useState("");
   const [animateHeader, setAnimateHeader] = useState("");
   const [animateMenu, setAnimateMenu] = useState("");
+  const [animateFooter, setAnimateFooter] = useState("");
 
   useEffect(() => {
     const rolagem = () => {
@@ -43,6 +44,15 @@ export default function AcheTudo() {
       }
       if (value <= 250) {
         setAnimateMenu("animate-menu-down");
+      }
+
+      if (value >= 400) {
+        if (header) {
+          setAnimateFooter("animate-footer-up");
+        }
+      }
+      if (value <= 350) {
+        setAnimateFooter("animate-footer-down");
       }
     };
 
@@ -93,7 +103,7 @@ export default function AcheTudo() {
           <div className="clear-both"></div>
         </div>
       </header>
-      <section className="relative top-[-190px] z-[-2] h-auto w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
+      <section className="relative top-[-290px] z-[-2] h-full w-full border-2 border-black bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
         <div className="w-full pt-30 pb-5 pl-9" id="vantagens">
           <span className="font-bold text-blue-950 text-shadow-lg">
             Quais as vantagens em ter um site ?
@@ -128,7 +138,12 @@ export default function AcheTudo() {
           <div className="relative top-[-92px] z-[-1] clear-both m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
         </div>
       </section>
-      <footer className="fixed top-0 h-full w-full border-5 border-blue-900"></footer>
+      <footer className="absolute top-125 h-full w-full border-5 border-blue-900 bg-amber-300">
+        <div className="h-20 border-1 border-black pt-5 pb-2 pl-22">
+          <h1 className="text-2xl">Quanto custa ?</h1>
+        </div>
+        <section></section>
+      </footer>
     </>
   );
 }
