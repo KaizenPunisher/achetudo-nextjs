@@ -9,7 +9,7 @@ export default function AcheTudo() {
   const [animateCelular, setAnimateCelular] = useState("");
   const [animateHeader, setAnimateHeader] = useState("");
   const [animateMenu, setAnimateMenu] = useState("");
-  //const [animateFooter, setAnimateFooter] = useState("");
+  const [animateFooter, setAnimateFooter] = useState("");
 
   useEffect(() => {
     const rolagem = () => {
@@ -33,7 +33,7 @@ export default function AcheTudo() {
           setAnimateHeader("animate-header-up");
         }
       }
-      if (value <= 0) {
+      if (value === 0) {
         setAnimateHeader("animate-header-down");
       }
 
@@ -42,19 +42,18 @@ export default function AcheTudo() {
           setAnimateMenu("animate-menu-up");
         }
       }
-      if (value <= 250) {
+      if (value <= 100) {
         setAnimateMenu("animate-menu-down");
       }
-      /*
-      if (value >= 400) {
+
+      if (value > 400) {
         if (header) {
           setAnimateFooter("animate-footer-up");
         }
       }
-      if (value <= 350) {
+      if (value === 400) {
         setAnimateFooter("animate-footer-down");
       }
-        */
     };
 
     window.addEventListener("scroll", rolagem);
@@ -139,7 +138,9 @@ export default function AcheTudo() {
           <div className="relative top-[-92px] z-[-1] clear-both m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
         </div>
       </section>
-      <footer className="absolute top-125 h-full w-full border-5 border-blue-900 bg-amber-300">
+      <footer
+        className={`absolute top-210 h-screen w-screen border-5 border-blue-900 bg-amber-300 ${animateFooter}`}
+      >
         <div className="h-20 border-1 border-black pt-5 pb-2 pl-22">
           <h1 className="text-2xl">Quanto custa ?</h1>
         </div>

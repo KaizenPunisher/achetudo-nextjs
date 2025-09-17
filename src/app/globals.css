@@ -386,72 +386,72 @@
   --animate-footer-down: animacao-footer-down 0.6s forwards;
   @keyframes animacao-footer-up {
     0% {
-      top: 0px;
+      top: 882px;
     }
     10% {
-      top: -10px;
+      top: 840px;
     }
     20% {
-      top: -20px;
+      top: 798px;
     }
     30% {
-      top: -30px;
+      top: 756px;
     }
     40% {
-      top: -40px;
+      top: 714px;
     }
     50% {
-      top: -50px;
+      top: 672px;
     }
     60% {
-      top: -60px;
+      top: 630px;
     }
     70% {
-      top: -70px;
+      top: 588px;
     }
     80% {
-      top: -80px;
+      top: 504px;
     }
     90% {
-      top: -90px;
+      top: 462px;
     }
     100% {
-      top: -100px;
+      top: 420px;
     }
   }
   @keyframes animacao-footer-down {
     0% {
-      top: -100px;
+      top: 420px;
     }
     10% {
-      top: -90px;
+      top: 462px;
     }
     20% {
-      top: -80px;
+      top: 504px;
     }
     30% {
-      top: -70px;
+      top: 588px;
     }
     40% {
-      top: -60px;
+      top: 630px;
     }
     50% {
-      top: -50px;
+      top: 672px;
     }
     60% {
-      top: -40px;
+      top: 714px;
     }
     70% {
-      top: -30px;
+      top: 756px;
     }
     80% {
-      top: -20px;
+      top: 798px;
     }
     90% {
-      top: -10px;
+      top: 840px;
     }
     100% {
-      top: 0px;
+      top: 882px;
     }
   }
 }
