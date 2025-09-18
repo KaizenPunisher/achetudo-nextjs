@@ -10,7 +10,7 @@ export default function AcheTudo() {
   const [animateHeader, setAnimateHeader] = useState("");
   const [animateMenu, setAnimateMenu] = useState("");
   const [animateFooter, setAnimateFooter] = useState("");
-  const [footerOn, setFooterOn] = useState(false);
+  const [footerOn, setFooterOn] = useState(0);
 
   useEffect(() => {
     const rolagem = () => {
@@ -49,19 +49,14 @@ export default function AcheTudo() {
 
       if (value > 400) {
         if (header) {
-          setFooterOn(true);
+          setAnimateFooter("animate-footer-up");
+          setFooterOn(0 + 1);
         }
       }
-      if (value <= 400) {
-        setFooterOn(false);
+      if (value <= 400 && footerOn > 0) {
+        setAnimateFooter("animate-footer-down");
       }
     };
-
-    if (footerOn == true) {
-      setAnimateFooter("animate-footer-up");
-    } else {
-      setAnimateFooter("animate-footer-down");
-    }
 
     window.addEventListener("scroll", rolagem);
   }, [footerOn]);
@@ -90,7 +85,9 @@ export default function AcheTudo() {
                   </figure>
                 </Link>
               </li>
-              <li className="text-xm m-auto border-2 border-black">COMPRAR</li>
+              <a href="#comprar" className="m-auto">
+                <li className="text-xm m-auto">COMPRAR</li>
+              </a>
             </ul>
             <div
               id="celular"
@@ -110,7 +107,7 @@ export default function AcheTudo() {
           <div className="clear-both"></div>
         </div>
       </header>
-      <section className="relative top-[-290px] z-[-2] h-full w-full border-2 border-black bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
+      <section className="relative top-[-290px] z-[-2] h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
         <div className="w-full pt-30 pb-5 pl-9" id="vantagens">
           <span className="font-bold text-blue-950 text-shadow-lg">
             Quais as vantagens em ter um site ?
@@ -146,12 +143,60 @@ export default function AcheTudo() {
         </div>
       </section>
       <footer
-        className={`absolute top-900 h-screen w-screen border-5 border-blue-900 bg-amber-300 ${animateFooter}`}
+        className={`absolute top-210 h-screen w-screen bg-amber-300 ${animateFooter} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat`}
+        id="comprar"
       >
-        <div className="h-20 border-1 border-black pt-5 pb-2 pl-22">
+        <div className="h-30 pt-20 pb-0 pl-22">
           <h1 className="text-2xl">Quanto custa ?</h1>
         </div>
-        <section></section>
+        <section className="text-right">
+          <div className="p-2">
+            <h2 className="p-2 text-lg text-blue-950">
+              Descrição do que você vai pagar
+            </h2>
+            <p className="text-[#7d909a]">
+              <strong className="text-blue-950">R$500,00</strong> -- Estrutura
+              Fixa e sem modificações dentro da hospedagem e dominio do Ache
+              Tudo
+              <strong className="text-blue-950">
+                (renovação anual R$70,00)
+              </strong>
+            </p>
+          </div>
+          <div className="p-2">
+            <h2 className="text-blue-950">Serviço adcional 1 (OPCIONAL)</h2>
+            <p className="text-[#7d909a]">
+              <strong className="text-blue-950">R$200,00</strong> -- Cadastro da
+              empresa no Google meu Negócio
+            </p>
+          </div>
+          <div className="p-2">
+            <h2 className="text-blue-950">Serviço adcional 2 (OPCIONAL)</h2>
+            <p className="text-[#7d909a]">
+              <strong className="text-blue-950">R$4800,00</strong> -- Suporte
+              anual para alteração no site
+            </p>
+          </div>
+          <div className="float-right w-50 pt-6 text-center">
+            <p className="text-sm">
+              Fale comigo através do Whatsapp para mais detalhes
+            </p>
+            <Link
+              href="https://wa.me/5511951235344?text=Olá,%20quero%20contratar%20o%20anúncio"
+              className="text-white"
+            >
+              <Image
+                alt="Whatsapp"
+                priority={false}
+                src="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/icones/whatsapp.svg"
+                width={50}
+                height={50}
+                className="m-auto mb-3"
+              />
+              Iniciar conversa
+            </Link>
+          </div>
+        </section>
       </footer>
     </>
   );
