@@ -100,7 +100,7 @@ export default function AcheTudo() {
             </div>
           </div>
           <div className="relative z-[-1] h-full w-full bg-white">
-            <div className="absolute top-60 left-13 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 lg:left-110 lg:w-auto lg:p-4">
+            <div className="absolute top-60 left-15 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 lg:left-110 lg:w-auto lg:p-4">
               <h1 className="text-center text-lg">
                 O seu negócio na palma da mão do cliente !
               </h1>
