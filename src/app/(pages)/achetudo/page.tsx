@@ -157,7 +157,7 @@ export default function AcheTudo() {
         <div className="h-20 pt-5 pb-0 pl-22 lg:h-30 lg:pt-10 lg:pl-142">
           <h1 className="text-2xl">Quanto custa ?</h1>
         </div>
-        <section className="m-auto h-auto w-120 text-right">
+        <section className="h-auto text-right lg:m-auto lg:w-120">
           <div className="p-2">
             <h2 className="p-2 text-lg text-blue-950">
               Descrição do que você vai pagar
