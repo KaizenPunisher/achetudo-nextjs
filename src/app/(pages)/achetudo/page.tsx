@@ -53,7 +53,7 @@ export default function AcheTudo() {
           setFooterOn(0 + 1);
         }
       }
-      if (value <= 400 && footerOn > 0) {
+      if (value <= 300 && footerOn > 0) {
         setAnimateFooter("animate-footer-down");
       }
     };
@@ -100,6 +100,11 @@ export default function AcheTudo() {
             </div>
           </div>
           <div className="relative z-[-1] h-full w-full bg-white">
+            <div className="absolute top-60 left-13 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 lg:left-110 lg:w-auto lg:p-4">
+              <h1 className="text-center text-lg">
+                O seu negócio na palma da mão do cliente !
+              </h1>
+            </div>
             <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat lg:bg-cover lg:bg-center"></figure>
             <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-5rem_4rem] bg-no-repeat opacity-0 transition-opacity delay-4000 lg:bg-cover lg:bg-center"></figure>
             <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[-2rem_1rem] bg-no-repeat opacity-0 transition-opacity delay-10000 lg:bg-cover lg:bg-center"></figure>
@@ -108,12 +113,15 @@ export default function AcheTudo() {
         </div>
       </header>
       <section className="relative top-[-290px] z-[-2] h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
-        <div className="w-full pt-30 pb-5 pl-9" id="vantagens">
-          <span className="font-bold text-blue-950 text-shadow-lg">
+        <div
+          className="w-full pt-20 pb-5 pl-7 lg:pt-10 lg:pl-110"
+          id="vantagens"
+        >
+          <span className="text-lg font-bold text-blue-950 text-shadow-lg lg:text-2xl">
             Quais as vantagens em ter um site ?
           </span>
         </div>
-        <div className="h-113 pt-2 pr-0 pb-0 pl-2">
+        <div className="h-113 pt-2 pr-0 pb-0 pl-2 lg:m-auto lg:w-120">
           <div className="h-auto pr-2 pb-2">
             <div className="float-left h-40 w-41 justify-center rounded-3xl border-1 border-white p-4 text-center backdrop-blur-sm">
               <span>
@@ -143,13 +151,13 @@ export default function AcheTudo() {
         </div>
       </section>
       <footer
-        className={`absolute top-210 h-screen w-screen bg-amber-300 ${animateFooter} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat`}
+        className={`absolute top-210 h-screen w-screen bg-yellow-300 p-4 lg:pt-10 lg:pb-182 ${animateFooter} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
         id="comprar"
       >
-        <div className="h-30 pt-20 pb-0 pl-22">
+        <div className="h-20 pt-5 pb-0 pl-22 lg:h-30 lg:pt-10 lg:pl-142">
           <h1 className="text-2xl">Quanto custa ?</h1>
         </div>
-        <section className="text-right">
+        <section className="m-auto h-auto w-120 text-right">
           <div className="p-2">
             <h2 className="p-2 text-lg text-blue-950">
               Descrição do que você vai pagar

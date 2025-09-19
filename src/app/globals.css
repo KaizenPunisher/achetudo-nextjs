@@ -416,12 +416,12 @@
       top: 462px;
     }
     100% {
-      top: 420px;
+      top: 400px;
     }
   }
   @keyframes animacao-footer-down {
     0% {
-      top: 420px;
+      top: 400px;
     }
     10% {
       top: 462px;
