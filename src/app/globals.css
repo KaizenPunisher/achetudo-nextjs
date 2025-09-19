@@ -167,7 +167,7 @@
   --animate-celular-down: animacao-celular-down 0.6s forwards;
   @keyframes animacao-celular-up {
     0% {
-      top: 440px;
+      top: 400px;
     }
     10% {
       top: 376px;
@@ -232,7 +232,7 @@
       top: 376px;
     }
     100% {
-      top: 440px;
+      top: 400px;
     }
   }
 

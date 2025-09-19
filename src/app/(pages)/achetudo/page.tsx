@@ -64,7 +64,7 @@ export default function AcheTudo() {
   return (
     <>
       <header id="header" className={`containter relative ${animateHeader}`}>
-        <div className="h-130 w-full overflow-hidden rounded-b-full shadow-lg/30">
+        <div className="h-130 w-full overflow-hidden rounded-b-full shadow-lg/30 lg:h-screen lg:rounded-none">
           <div
             id="menu"
             className={`fixed top-0 left-0 z-20 float-start box-border h-25 w-full justify-center rounded-b-3xl border-white bg-white p-2 ${animateMenu}`}
@@ -91,7 +91,7 @@ export default function AcheTudo() {
             </ul>
             <div
               id="celular"
-              className={`fixed top-110 left-[35%] z-20 h-50 w-29 pt-4 pl-2 ${animateCelular} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/celular.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat`}
+              className={`fixed top-100 left-[35%] z-20 h-50 w-29 pt-4 pl-2 lg:left-[45%] ${animateCelular} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/celular.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat`}
             >
               <figure className="absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-1rem_0rem] bg-no-repeat"></figure>
               <figure className="animate-slider absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-1rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
@@ -100,9 +100,9 @@ export default function AcheTudo() {
             </div>
           </div>
           <div className="relative z-[-1] h-full w-full bg-white">
-            <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat"></figure>
-            <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-5rem_4rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
-            <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[-2rem_1rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
+            <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat lg:bg-cover lg:bg-center"></figure>
+            <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-5rem_4rem] bg-no-repeat opacity-0 transition-opacity delay-4000 lg:bg-cover lg:bg-center"></figure>
+            <figure className="animate-slider absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[170%_100%] bg-position-[-2rem_1rem] bg-no-repeat opacity-0 transition-opacity delay-10000 lg:bg-cover lg:bg-center"></figure>
           </div>
           <div className="clear-both"></div>
         </div>
