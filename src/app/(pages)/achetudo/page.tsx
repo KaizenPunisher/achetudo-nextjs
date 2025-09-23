@@ -91,7 +91,7 @@ export default function AcheTudo() {
             </ul>
             <div
               id="celular"
-              className={`fixed top-100 left-[35%] z-20 h-50 w-29 pt-4 pl-2 lg:left-[45%] ${animateCelular} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/celular.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat`}
+              className={`fixed top-100 left-[35%] z-20 h-50 w-29 pt-4 pl-2 lg:left-[47%] ${animateCelular} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/celular.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat`}
             >
               <figure className="absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-1rem_0rem] bg-no-repeat"></figure>
               <figure className="animate-slider absolute m-auto h-40 w-24 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[170%_100%] bg-position-[-1rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
@@ -100,9 +100,9 @@ export default function AcheTudo() {
             </div>
           </div>
           <div className="relative z-[-1] h-full w-full bg-white">
-            <div className="absolute top-60 left-15 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 lg:left-110 lg:w-auto lg:p-4">
+            <div className="absolute top-60 left-15 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 lg:left-[38%] lg:w-auto lg:p-4">
               <h1 className="text-center text-lg">
-                O seu negócio na palma da mão do cliente !
+                O seu negócio na palma da mão do seu cliente !
               </h1>
             </div>
             <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat lg:bg-cover lg:bg-center"></figure>
@@ -112,11 +112,8 @@ export default function AcheTudo() {
           <div className="clear-both"></div>
         </div>
       </header>
-      <section className="relative top-[-290px] z-[-2] h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat">
-        <div
-          className="w-full pt-20 pb-5 pl-7 lg:pt-10 lg:pl-110"
-          id="vantagens"
-        >
+      <section className="absolute top-0 z-[-2] h-290 w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_1.jpg')] bg-size-[250%_100%] bg-center bg-no-repeat pt-100">
+        <div className="w-full pt-0 pb-5 pl-7 lg:pl-[37%]" id="vantagens">
           <span className="text-lg font-bold text-blue-950 text-shadow-lg lg:text-2xl">
             Quais as vantagens em ter um site ?
           </span>
@@ -147,11 +144,11 @@ export default function AcheTudo() {
             </div>
             <div className="clear-both"></div>
           </div>
-          <div className="relative top-[-92px] z-[-1] clear-both m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
+          <div className="relative top-[10px] z-[-1] clear-both m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
         </div>
       </section>
       <footer
-        className={`absolute top-210 h-screen w-screen bg-yellow-300 p-4 lg:pt-10 lg:pb-182 ${animateFooter} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
+        className={`absolute top-240 h-screen w-screen bg-yellow-300 p-4 lg:top-261 lg:pt-10 lg:pb-182 ${animateFooter} bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
         id="comprar"
       >
         <div className="h-20 pt-5 pb-0 pl-22 lg:h-30 lg:pt-10 lg:pl-142">
