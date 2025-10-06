@@ -8,12 +8,23 @@ export default function WireFrame_1() {
       const value = window.scrollY;
       const slider = document.getElementById("slider") as HTMLElement;
       const chamada_1 = document.getElementById("chamada_1") as HTMLElement;
-      const main = document.getElementById("main") as HTMLElement;
+      const rodape = document.getElementById("rodape") as HTMLElement;
+
       if (slider) slider.style.top = `${value * -1}px`;
       if (value > 200) {
-        chamada_1.style.left = `${(value - 200) * -1}px`;
+        chamada_1.style.left = `${(value - 205) * -1}px`;
       }
-      if (value === main.offsetHeight - 100) {
+      console.log(
+        document.body.scrollHeight,
+        window.innerHeight,
+        window.scrollY,
+      );
+
+      if (value > document.body.scrollHeight - window.innerHeight + 10) {
+        rodape.style.backgroundColor = "red";
+        if (value < document.body.scrollHeight - window.innerHeight + 15) {
+          rodape.style.backgroundColor = "yellow";
+        }
       }
     };
 
