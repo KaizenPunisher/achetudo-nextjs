@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function WireFrame_1() {
+  const [animateRodape, setAnimateRodape] = useState("");
+
   useEffect(() => {
     const rolagem = () => {
       const value = window.scrollY;
       const slider = document.getElementById("slider") as HTMLElement;
       const chamada_1 = document.getElementById("chamada_1") as HTMLElement;
-      const rodape = document.getElementById("rodape") as HTMLElement;
 
       if (slider) slider.style.top = `${value * -1}px`;
       if (value > 200) {
@@ -20,11 +21,11 @@ export default function WireFrame_1() {
         window.scrollY,
       );
 
-      if (value > document.body.scrollHeight - window.innerHeight + 10) {
-        rodape.style.backgroundColor = "red";
-        if (value < document.body.scrollHeight - window.innerHeight + 15) {
-          rodape.style.backgroundColor = "yellow";
-        }
+      if (value > document.body.scrollHeight - window.innerHeight - 10) {
+        setAnimateRodape("animate-rodape-up");
+      }
+      if (value < document.body.scrollHeight - window.innerHeight - 30) {
+        setAnimateRodape("animate-rodape-down");
       }
     };
 
@@ -53,7 +54,7 @@ export default function WireFrame_1() {
           <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-red-700 opacity-0 transition-opacity delay-4000"></figure>
           <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-green-700 opacity-0 transition-opacity delay-10000"></figure>
         </div>
-        <div className="static m-auto h-full w-auto bg-amber-200">
+        <div className="static m-auto h-full w-auto bg-amber-200 pb-35">
           <h1 className="text-6xl font-bold">Dio Santos</h1>
           <p className="mt-4 text-center text-lg">
             Welcome to the Dio Santos page!
@@ -102,16 +103,16 @@ export default function WireFrame_1() {
           <p className="mt-4 text-center text-lg">
             Welcome to the Dio Santos page!
           </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
+          <h1 className="text-6xl font-bold">FINAL</h1>
+          <p className="mt-4 text-center text-lg">FINAL!</p>
         </div>
         <footer
-          className="static bottom-0 left-0 m-auto w-full bg-gray-800 p-4"
+          className="relative bottom-0 left-0 z-30 m-auto h-auto w-full"
           id="rodape"
         >
-          <div className="flex justify-center">
+          <div
+            className={`${animateRodape} absolute flex w-screen justify-center bg-gray-800 pt-10 pb-20`}
+          >
             <p className="text-white">
               © 2023 Dio Santos. All rights reserved.
             </p>
