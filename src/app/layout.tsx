@@ -65,7 +65,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb1.png"
+          content="https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb1.jpg"
         />
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="630" />
