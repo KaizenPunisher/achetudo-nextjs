@@ -3,11 +3,10 @@
 import { useEffect, useState } from "react";
 import MetaTeste from "./metadata";
 
-MetaTeste();
-
 export default function Teste() {
   const [animateRodape, setAnimateRodape] = useState("");
 
+  MetaTeste();
   useEffect(() => {
     const rolagem = () => {
       const value = window.scrollY;
