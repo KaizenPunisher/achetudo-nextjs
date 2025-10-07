@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://www.achetudotiradentes.com.br",
     images: [
       {
-        url: "/thumbs/thumb1.jpg", // O caminho para a imagem Open Graph
+        url: "https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb1.jpg", // O caminho para a imagem Open Graph
         width: 1200,
         height: 630,
       },
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   ],
 
   icons: [
-    { rel: "apple-touch-icon", url: "../../icon-128x128.png" },
-    { rel: "icon", url: "../../icon-128x128.png" },
+    { rel: "apple-touch-icon", url: "icon-128x128.png" },
+    { rel: "icon", url: "icon-128x128.png" },
   ],
 
   robots: {
