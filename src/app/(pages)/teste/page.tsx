@@ -1,8 +1,60 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Metadata } from "next";
 
-export default function WireFrame_1() {
+export const metadatateste: Metadata = {
+  description: "Pagina de teste para desenvolvimento de novas funcionalidades.",
+  openGraph: {
+    title: "Pagina de Teste",
+    url: "https://www.achetudotiradentes.com.br/teste",
+    images: [
+      {
+        url: "https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb2.jpg", // O caminho para a imagem Open Graph
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Site name TESTE",
+    type: "website", // ou 'article', 'book', etc.
+  },
+  generator: "Next.js",
+  keywords: [
+    "Ache Tudo",
+    "Cidade Tiradentes",
+    "Ache Tudo Cidade Tiradentes",
+    "Ache Tudo Tiradentes",
+    "Comércio Cidade Tiradentes",
+    "Comércio Tiradentes",
+    "Ache Tudo e Região",
+  ],
+
+  authors: [
+    {
+      name: "Kaizen",
+      url: "https://github.com/KaizenPunisher/",
+    },
+  ],
+
+  icons: [
+    { rel: "apple-touch-icon", url: "icon-128x128.png" },
+    { rel: "icon", url: "icon-128x128.png" },
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export default function Teste() {
   const [animateRodape, setAnimateRodape] = useState("");
 
   useEffect(() => {

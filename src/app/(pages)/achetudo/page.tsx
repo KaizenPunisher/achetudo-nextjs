@@ -178,7 +178,7 @@ export default function AcheTudo() {
           <div className="p-2">
             <h2 className="text-blue-950">Serviço adcional 2 (OPCIONAL)</h2>
             <p className="text-[#7d909a]">
-              <strong className="text-blue-950">R$4800,00</strong> -- Suporte
+              <strong className="text-blue-950">R$800,00</strong> -- Suporte
               anual para alteração no site
             </p>
           </div>
