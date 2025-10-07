@@ -9,9 +9,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   description:
     "Venha conhecer o centro comercial Cidade Tiradentes de maneira facil e rapida. Aqui você encontra todos os produtos e serviços ao alcance do seu Whatsapp",
+  title: "Ache Tudo Comércio Cidade Tiradentes",
   openGraph: {
     title: "Ache Tudo Comércio Cidade Tiradentes",
-    url: "https://www.achetudotiradentes.com.br",
     images: [
       {
         url: "https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb1.jpg", // O caminho para a imagem Open Graph
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     ],
     siteName: "Ache Tudo Cidade Tiradentes",
     type: "website", // ou 'article', 'book', etc.
+    url: "https://www.achetudotiradentes.com.br",
   },
   generator: "Next.js",
   manifest: "/manifest.json",
