@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://www.achetudotiradentes.com.br",
     images: [
       {
-        url: "../public/thumbs/thumb1.jpg", // O caminho para a imagem Open Graph
+        url: "/public/thumbs/thumb1.jpg", // O caminho para a imagem Open Graph
         width: 1200,
         height: 630,
       },
