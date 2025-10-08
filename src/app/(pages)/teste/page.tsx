@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Metadata } from "next";
+//import { Metadata } from "next";
 import Topo from "./(componentes)/topo/topo";
 /*
 export function generateMetadata(): Metadata {
