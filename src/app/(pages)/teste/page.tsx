@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Topo from "./(componentes)/topo/topo";
 import Banner1 from "./(componentes)/banner1/banner1";
 import Slider from "./(componentes)/slider/slider";
+import Conteudo from "./(componentes)/conteudo/conteudo";
 /*
 export function generateMetadata(): Metadata {
   return {
@@ -100,58 +101,7 @@ export default function Teste() {
         <Topo />
         <Banner1 />
         <Slider />
-        <div className="static m-auto h-full w-auto bg-amber-200 pb-35">
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">Dio Santos</h1>
-          <p className="mt-4 text-center text-lg">
-            Welcome to the Dio Santos page!
-          </p>
-          <h1 className="text-6xl font-bold">FINAL</h1>
-          <p className="mt-4 text-center text-lg">FINAL!</p>
-        </div>
+        <Conteudo />
         <footer
           className="relative bottom-0 left-0 z-30 m-auto h-auto w-full"
           id="rodape"
