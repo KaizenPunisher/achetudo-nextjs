@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
       images: [
         {
           url: "https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb1.jpg", // O caminho para a imagem Open Graph
-          width: 1210,
+          width: 1200,
           height: 630,
         },
       ],
