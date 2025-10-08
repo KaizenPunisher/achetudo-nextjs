@@ -1,3 +1,5 @@
+"use client";
+
 export default function Conteudo() {
   return (
     <div className="static m-auto h-full w-auto bg-amber-200 pb-35">
