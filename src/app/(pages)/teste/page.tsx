@@ -10,7 +10,6 @@ export function generateMetadata(): Metadata {
     description:
       "Pagina de teste para desenvolvimento de novas funcionalidades.",
     title: "Pagina de Teste 1",
-
     openGraph: {
       title: "Pagina de Teste_1",
       images: [
@@ -34,19 +33,16 @@ export function generateMetadata(): Metadata {
       "Comércio Tiradentes",
       "Ache Tudo e Região",
     ],
-
     authors: [
       {
         name: "Kaizen",
         url: "https://github.com/KaizenPunisher/",
       },
     ],
-
     icons: [
       { rel: "apple-touch-icon", url: "icon-128x128.png" },
       { rel: "icon", url: "icon-128x128.png" },
     ],
-
     robots: {
       index: true,
       follow: true,
