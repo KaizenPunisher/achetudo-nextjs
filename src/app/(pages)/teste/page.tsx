@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 //import { Metadata } from "next";
 import Topo from "./(componentes)/topo/topo";
 import Banner1 from "./(componentes)/banner1/banner1";
+import Slider from "./(componentes)/slider/slider";
 /*
 export function generateMetadata(): Metadata {
   return {
@@ -98,11 +99,7 @@ export default function Teste() {
       >
         <Topo />
         <Banner1 />
-        <div className="relative h-160 w-full bg-gray-600 lg:h-240" id="slider">
-          <figure className="absolute h-full w-full bg-amber-600"></figure>
-          <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-red-700 opacity-0 transition-opacity delay-4000"></figure>
-          <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-green-700 opacity-0 transition-opacity delay-10000"></figure>
-        </div>
+        <Slider />
         <div className="static m-auto h-full w-auto bg-amber-200 pb-35">
           <h1 className="text-6xl font-bold">Dio Santos</h1>
           <p className="mt-4 text-center text-lg">
