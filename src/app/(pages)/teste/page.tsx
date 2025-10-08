@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 //import { Metadata } from "next";
 import Topo from "./(componentes)/topo/topo";
+import Banner1 from "./(componentes)/banner1/banner1";
 /*
 export function generateMetadata(): Metadata {
   return {
@@ -66,11 +67,11 @@ export default function Teste() {
     const rolagem = () => {
       const value = window.scrollY;
       const slider = document.getElementById("slider") as HTMLElement;
-      const chamada_1 = document.getElementById("chamada_1") as HTMLElement;
+      const banner_1 = document.getElementById("banner_1") as HTMLElement;
 
       if (slider) slider.style.top = `${value * -1}px`;
       if (value > 200) {
-        chamada_1.style.left = `${(value - 205) * -1}px`;
+        banner_1.style.left = `${(value - 205) * -1}px`;
       }
       console.log(
         document.body.scrollHeight,
@@ -96,12 +97,7 @@ export default function Teste() {
         id="main"
       >
         <Topo />
-        <div
-          className="fixed top-0 left-0 z-10 h-60 w-50 border-4 border-black pt-20"
-          id="chamada_1"
-        >
-          <figure className="h-150 w-40 bg-blue-500"></figure>
-        </div>
+        <Banner1 />
         <div className="relative h-160 w-full bg-gray-600 lg:h-240" id="slider">
           <figure className="absolute h-full w-full bg-amber-600"></figure>
           <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-red-700 opacity-0 transition-opacity delay-4000"></figure>
