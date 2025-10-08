@@ -10,11 +10,12 @@ export function generateMetadata(): Metadata {
     description:
       "Pagina de teste para desenvolvimento de novas funcionalidades.",
     title: "Pagina de Teste 1",
+
     openGraph: {
       title: "Pagina de Teste_1",
       images: [
         {
-          url: "https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumb2.jpg", // O caminho para a imagem Open Graph
+          url: "https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/thumbs/thumbs2.jpg", // O caminho para a imagem Open Graph
           width: 1200,
           height: 630,
         },
