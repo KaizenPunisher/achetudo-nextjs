@@ -16,10 +16,11 @@ export default function Banner1() {
   }, []);
   return (
     <div
-      className="fixed top-0 left-0 z-10 h-60 w-50 border-4 border-black pt-20"
+      className="fixed top-0 left-0 z-10 m-0 h-60 w-[73vw] border-4 border-black pt-15 transition-all duration-100 lg:w-[55vw]"
       id="banner_1"
     >
-      <figure className="h-150 w-40 bg-blue-500"></figure>
+      <figure className="float-right h-150 w-40 bg-blue-500"></figure>
+      <div className="clear-both"></div>
     </div>
   );
 }
