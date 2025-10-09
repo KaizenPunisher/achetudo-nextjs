@@ -64,7 +64,7 @@ export default function AcheTudo() {
   return (
     <>
       <header id="header" className={`containter relative ${animateHeader}`}>
-        <div className="h-130 w-full overflow-hidden rounded-b-full shadow-lg/30 lg:h-screen lg:rounded-none">
+        <div className="h-130 w-full overflow-hidden rounded-b-full border-4 border-red-700 shadow-lg/30 lg:h-screen lg:rounded-none">
           <div
             id="menu"
             className={`fixed top-0 left-0 z-20 float-start box-border h-25 w-full justify-center rounded-b-3xl border-white bg-white p-2 ${animateMenu}`}
