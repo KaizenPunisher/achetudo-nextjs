@@ -16,7 +16,7 @@ export default function Banner1() {
   }, []);
   return (
     <div
-      className="fixed top-0 left-0 z-10 h-auto w-auto border-4 border-black pt-[50vh] pl-[10vw] transition-all duration-100 lg:pt-[54vh] lg:pl-[33vw]"
+      className="fixed top-0 left-0 z-10 h-auto w-auto pt-[50vh] pl-[10vw] transition-all duration-100 lg:pt-[54vh] lg:pl-[33vw]"
       id="banner_1"
     >
       <div className="z-50 m-auto w-65 rounded-3xl bg-white/60 p-2 lg:w-150 lg:p-4">

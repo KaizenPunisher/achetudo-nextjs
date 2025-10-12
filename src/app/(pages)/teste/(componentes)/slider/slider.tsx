@@ -17,12 +17,12 @@ export default function Slider() {
   }, []);
   return (
     <div
-      className="relative m-0 h-160 w-full bg-gray-600 transition-all duration-100 lg:h-240"
+      className="relative m-0 h-160 w-full overflow-hidden rounded-b-full bg-gray-600 shadow-lg/30 transition-all duration-100 lg:h-240"
       id="slider"
     >
-      <figure className="absolute h-full w-full bg-amber-600"></figure>
-      <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-red-700 opacity-0 transition-opacity delay-4000"></figure>
-      <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-green-700 opacity-0 transition-opacity delay-10000"></figure>
+      <figure className="absolute h-full w-full bg-amber-600 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[150%_100%] bg-position-[-1rem_0rem] bg-no-repeat"></figure>
+      <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-red-700 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_2.jpg')] bg-size-[150%_100%] bg-position-[-1rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
+      <figure className="animate-slider absolute top-0 left-0 h-full w-full bg-green-700 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_3.jpg')] bg-size-[150%_100%] bg-position-[0rem_0rem] bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
     </div>
   );
 }
