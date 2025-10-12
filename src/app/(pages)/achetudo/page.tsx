@@ -100,9 +100,9 @@ export default function AcheTudo() {
             </div>
           </div>
           <div className="relative z-[-1] h-full w-full bg-white">
-            <div className="absolute top-60 left-15 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 lg:left-[38%] lg:w-auto lg:p-4">
+            <div className="absolute top-60 left-15 z-50 w-65 rounded-3xl border-1 border-white bg-white/60 p-2 backdrop-blur-sm lg:left-[38%] lg:w-auto lg:p-4">
               <h1 className="text-center text-lg">
-                O seu negócio na palma da mão do seu cliente !
+                O seu negócio na palma da mão do cliente !
               </h1>
             </div>
             <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/slide_1.jpg')] bg-size-[220%_110%] bg-position-[-5rem_4rem] bg-no-repeat lg:bg-cover lg:bg-center"></figure>
