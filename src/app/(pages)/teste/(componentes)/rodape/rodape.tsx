@@ -25,9 +25,14 @@ export default function Rodape() {
       id="rodape"
     >
       <div
-        className={`${animateRodape} absolute flex w-screen justify-center bg-gray-800 pt-10 pb-20`}
+        className={`${animateRodape} absolute w-screen justify-center bg-yellow-300 pt-10 pb-20`}
       >
-        <p className="text-white">© 2023 Dio Santos. All rights reserved.</p>
+        <div className="h-auto w-full border-2 border-black text-center">
+          <h1 className="text-2xl">Quanto custa ?</h1>
+        </div>
+        <div>
+          <p>© 2023 Dio Santos. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
