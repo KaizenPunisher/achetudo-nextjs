@@ -30,12 +30,12 @@ export default function Rodape() {
       id="rodape"
     >
       <div
-        className={`${animateRodape} absolute m-0 w-screen justify-center bg-yellow-300 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat pt-10 pb-20 lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
+        className={`${animateRodape} absolute m-0 w-screen justify-center bg-yellow-300 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat pt-0 pb-20 lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
       >
-        <div className="m-auto h-auto w-auto">
-          <div className="h-auto w-auto text-center">
-            <h1 className="text-2xl">Quanto custa ?</h1>
-          </div>
+        <div className="h-auto w-auto bg-amber-400 p-4 text-center">
+          <h1 className="text-2xl">Quanto custa ?</h1>
+        </div>
+        <div className="m-auto h-auto w-auto lg:w-1/3">
           <section
             className={`h-0 w-auto overflow-hidden p-0 text-right ${animateRodapeConteudo}`}
           >
@@ -56,14 +56,18 @@ export default function Rodape() {
               </p>
             </div>
             <div className="p-4">
-              <h2 className="text-blue-950">Serviço adcional 1 (OPCIONAL)</h2>
+              <h2 className="text-blue-950">
+                <i>Serviço adcional 1 (OPCIONAL)</i>
+              </h2>
               <p className="text-[#7d909a]">
                 <strong className="text-blue-950">R$300,00</strong> -- Cadastro
                 da empresa no Google meu Negócio
               </p>
             </div>
             <div className="p-4">
-              <h2 className="text-blue-950">Serviço adcional 2 (OPCIONAL)</h2>
+              <h2 className="text-blue-950">
+                <i>Serviço adcional 2 (OPCIONAL)</i>
+              </h2>
               <p className="text-[#7d909a]">
                 <strong className="text-blue-950">R$1200,00</strong> -- Suporte
                 anual para alteração no site
@@ -91,7 +95,7 @@ export default function Rodape() {
             <div className="clear-both"></div>
           </section>
         </div>
-        <div className="relative top-[-12vh] h-auto bg-amber-400 p-4 text-center">
+        <div className="relative top-[-10vh] h-auto bg-amber-400 p-4 text-center">
           <p>© 2023 Dio Santos. All rights reserved.</p>
         </div>
       </div>
