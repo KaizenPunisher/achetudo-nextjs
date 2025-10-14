@@ -19,7 +19,7 @@ export default function Banner1() {
       className="fixed top-0 left-0 z-10 h-auto w-auto pt-[50vh] pl-[15vw] transition-all duration-100 lg:pt-[54vh] lg:pl-[33vw]"
       id="banner_1"
     >
-      <div className="z-50 m-auto w-65 rounded-3xl bg-white/60 p-2 lg:w-150 lg:p-4">
+      <div className="z-50 m-auto w-65 rounded-3xl bg-white/40 p-2 lg:w-150 lg:p-4">
         <h1 className="text-center text-lg">
           O seu negócio na palma da mão do cliente!
         </h1>

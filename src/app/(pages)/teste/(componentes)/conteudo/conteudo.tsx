@@ -9,7 +9,7 @@ export default function Conteudo() {
         </span>
       </div>
       <div className="m-auto mb-5 h-60 w-60 justify-center rounded-3xl border-1 border-white p-10 text-center text-xl backdrop-blur-sm">
-        <span>Apareça nas pesquisa do google e localização google maps.</span>
+        <span>Apareça nas pesquisas do google e localização google maps.</span>
       </div>
       <div className="m-auto mb-5 h-60 w-60 justify-center rounded-3xl border-1 border-white p-10 text-center text-xl backdrop-blur-sm">
         <span>Contato do cliente diretamente por email ou Whatsapp.</span>
@@ -22,7 +22,7 @@ export default function Conteudo() {
       <div className="m-auto mb-5 h-60 w-60 justify-center rounded-3xl border-1 border-white p-10 text-center text-xl backdrop-blur-sm">
         <span>Mostre sua loja ou produto nas redes sociais usando o site.</span>
       </div>
-      <div className="z-[-1] clear-both m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
+      <div className="z-[-1] m-auto h-50 w-50 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_chamada_2.png')] bg-size-[100%_100%] bg-center bg-no-repeat"></div>
     </div>
   );
 }
