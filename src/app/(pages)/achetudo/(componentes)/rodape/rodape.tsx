@@ -45,7 +45,7 @@ export default function Rodape() {
               </h2>
             </div>
             <div className="w-auto p-4">
-              <p className="text-[#7d909a]">
+              <p className="text-amber-800">
                 <strong className="text-blue-950">R$500,00</strong> -- Estrutura
                 Fixa e sem modificações dentro da hospedagem e dominio do Ache
                 Tudo
@@ -59,7 +59,7 @@ export default function Rodape() {
               <h2 className="text-blue-950">
                 <i>Serviço adcional 1 (OPCIONAL)</i>
               </h2>
-              <p className="text-[#7d909a]">
+              <p className="text-amber-800">
                 <strong className="text-blue-950">R$300,00</strong> -- Cadastro
                 da empresa no Google meu Negócio
               </p>
@@ -68,7 +68,7 @@ export default function Rodape() {
               <h2 className="text-blue-950">
                 <i>Serviço adcional 2 (OPCIONAL)</i>
               </h2>
-              <p className="text-[#7d909a]">
+              <p className="text-amber-800">
                 <strong className="text-blue-950">R$1200,00</strong> -- Suporte
                 anual para alteração no site
               </p>
