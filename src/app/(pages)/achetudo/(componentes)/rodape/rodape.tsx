@@ -30,7 +30,7 @@ export default function Rodape() {
       id="rodape"
     >
       <div
-        className={`${animateRodape} absolute m-0 w-screen justify-center bg-yellow-300 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat pt-0 pb-20 lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
+        className={`${animateRodape} absolute m-0 w-screen justify-center bg-yellow-300 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat pt-0 pb-20 lg:bg-size-[20%_40%] lg:bg-[30rem_24rem]`}
       >
         <div className="h-auto w-auto bg-amber-100 p-4 text-center">
           <h1 className="text-2xl">Quanto custa ?</h1>
