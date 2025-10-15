@@ -133,7 +133,7 @@
 @theme {
   --font-comfortaa: "Comfortaa", cursive;
   --font-inter: "Inter", sans-serif;
-  --breakpoint-sm: 24rem;
+  --breakpoint-xl: 64rem;
 
   --animate-fade-in-scale: fade-in-scale 1s ease-out;
   @keyframes fade-in-scale {
