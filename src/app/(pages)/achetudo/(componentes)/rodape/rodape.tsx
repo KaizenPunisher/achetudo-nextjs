@@ -32,7 +32,7 @@ export default function Rodape() {
       <div
         className={`${animateRodape} absolute m-0 w-screen justify-center bg-yellow-300 bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/4570f0bd-125f-4319-846e-9e263ffa66ee/fundo_footer_1.png')] bg-size-[50%_30%] bg-left-bottom bg-no-repeat pt-0 pb-20 lg:bg-size-[20%_40%] lg:bg-[30rem_29rem]`}
       >
-        <div className="h-auto w-auto bg-amber-400 p-4 text-center">
+        <div className="h-auto w-auto bg-amber-100 p-4 text-center">
           <h1 className="text-2xl">Quanto custa ?</h1>
         </div>
         <div className="m-auto h-auto w-auto lg:w-1/3">
@@ -40,7 +40,7 @@ export default function Rodape() {
             className={`h-0 w-auto overflow-hidden p-0 text-right ${animateRodapeConteudo}`}
           >
             <div>
-              <h2 className="p-2 text-lg text-blue-950">
+              <h2 className="pt-4 pr-4 text-lg text-blue-950">
                 Descrição do que você vai pagar
               </h2>
             </div>
@@ -95,8 +95,9 @@ export default function Rodape() {
             <div className="clear-both"></div>
           </section>
         </div>
-        <div className="relative top-[-10vh] h-auto bg-amber-400 p-4 text-center">
-          <p>© 2023 Dio Santos. All rights reserved.</p>
+        <div className="relative top-[-11vh] h-auto bg-amber-500 p-6 text-center">
+          <p>© 2023 Dio Santos.</p>
+          <p> All rights reserved.</p>
         </div>
       </div>
     </footer>
