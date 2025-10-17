@@ -58,7 +58,7 @@ export default function DioSantos() {
   return (
     <>
       <main
-        className="relative top-0 left-0 m-0 flex h-full w-screen flex-col items-center justify-center bg-white bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/fundo.jpg')] bg-size-[500%_100%] bg-position-[-60rem_0rem] bg-no-repeat"
+        className="relative top-0 left-0 m-0 flex h-full w-screen flex-col items-center justify-center bg-white bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/fundo.jpg')] bg-size-[500%_200%] bg-position-[-50rem_-30rem] bg-no-repeat lg:bg-size-[130%_100%] lg:bg-position-[-20rem_0rem]"
         id="main"
       >
         <Topo />

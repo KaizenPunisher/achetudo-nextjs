@@ -26,7 +26,7 @@ export default function Rodape() {
         id="rodape"
       >
         <div
-          className={`${animateRodape} absolute flex w-screen justify-center bg-gray-800 pt-10 pb-20`}
+          className={`${animateRodape} absolute flex w-screen justify-center bg-white/30 p-4 backdrop-blur-sm`}
         >
           <p className="text-white">© 2023 Dio Santos. All rights reserved.</p>
         </div>
