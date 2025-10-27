@@ -9,10 +9,11 @@ const eraslight = localFont({
   variable: "--font-eraslight",
 });
 
-const erasdemi = localFont({
-  src: "./fonts/erasdemi.ttf",
-  variable: "--font-erasdemi",
-});
+//const erasdemi = localFont({
+// src: "./fonts/erasdemi.ttf",
+//variable: "--font-erasdemi",
+//});
+//${erasdemi.className}
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
@@ -93,10 +94,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${inter.variable} ${eraslight.className} ${erasdemi.className}`}
-    >
+    <html lang="pt-BR" className={`${inter.variable} ${eraslight.className} `}>
       <body className={`${comfortaa.className} antialiased`}>
         {children}
         <Toaster />
