@@ -22,8 +22,8 @@ export default function Slider() {
         id="slider"
       >
         <div className="absolute top-[-60px] left-15 justify-center border-2 border-red-600 text-center">
-          <h1>Porque a web é para todos</h1>
-          <h4>Sites e Sistemas</h4>
+          <h1 className="font-erasdemi">Porque a web é para todos</h1>
+          <p className="font-eraslight">Sites e Sistemas</p>
         </div>
         <figure className="absolute h-full w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/slide_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></figure>
         <figure className="animate-slider absolute top-0 left-0 h-full w-full opacity-0 transition-opacity delay-4000"></figure>

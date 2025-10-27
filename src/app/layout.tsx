@@ -1,7 +1,18 @@
+import localFont from "next/font/local";
 import { Comfortaa, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Metadata } from "next";
+
+const eraslight = localFont({
+  src: "fonts/eraslght.ttf",
+  variable: "--font-eraslight",
+});
+
+const erasdemi = localFont({
+  src: "fonts/erasdemi.ttf",
+  variable: "--font-erasdemi",
+});
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
@@ -82,7 +93,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${inter.variable} ${eraslight.className} ${erasdemi.className}`}
+    >
       <body className={`${comfortaa.className} antialiased`}>
         {children}
         <Toaster />

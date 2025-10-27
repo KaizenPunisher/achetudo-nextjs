@@ -132,6 +132,8 @@
 
 @theme {
   --font-comfortaa: "Comfortaa", cursive;
+  --font-eraslight: "eraslight", sans-serif;
+  --font-erasdemi: "erasdemi", sans-serif;
   --font-inter: "Inter", sans-serif;
   --breakpoint-xl: 64rem;
 
