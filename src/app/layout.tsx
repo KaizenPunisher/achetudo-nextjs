@@ -5,12 +5,12 @@ import { Toaster } from "sonner";
 import { Metadata } from "next";
 
 const eraslight = localFont({
-  src: "fonts/eraslght.ttf",
+  src: "./fonts/eraslght.ttf",
   variable: "--font-eraslight",
 });
 
 const erasdemi = localFont({
-  src: "fonts/erasdemi.ttf",
+  src: "./fonts/erasdemi.ttf",
   variable: "--font-erasdemi",
 });
 
