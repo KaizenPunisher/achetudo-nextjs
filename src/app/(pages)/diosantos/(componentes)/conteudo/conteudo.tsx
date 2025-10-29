@@ -12,6 +12,9 @@ export default function Conteudo() {
   return (
     <>
       <div className="static m-0 h-full w-auto bg-amber-200 pb-35">
+        <div className="relative m-auto mt-10 mb-6 w-fit">
+          <h1>Trabalhos realizados</h1>
+        </div>
         <Carousel
           opts={{
             align: "start",

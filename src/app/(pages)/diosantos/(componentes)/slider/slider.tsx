@@ -18,10 +18,10 @@ export default function Slider() {
   return (
     <>
       <div
-        className="relative m-0 mt-45 h-50 w-full transition-all duration-100 lg:h-240"
+        className="relative m-0 mt-30 mb-10 h-50 w-full transition-all duration-100 lg:h-240"
         id="slider"
       >
-        <div className="absolute top-[-60px] left-12 justify-center border-2 border-red-600 text-center">
+        <div className="relative m-auto w-fit justify-center border-2 border-red-600 text-center">
           <p className="font-erasdemi text-xl">Porque a web é para todos</p>
           <p className="font-eraslight">Sites e Sistemas</p>
         </div>
