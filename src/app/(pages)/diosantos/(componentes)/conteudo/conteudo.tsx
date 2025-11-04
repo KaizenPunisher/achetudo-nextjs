@@ -23,10 +23,10 @@ export default function Conteudo() {
         >
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="">
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <CardContent className="flex aspect-square items-center justify-center bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/portifolio_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat p-6">
                       <span className="text-3xl font-semibold">
                         {index + 1}
                       </span>
