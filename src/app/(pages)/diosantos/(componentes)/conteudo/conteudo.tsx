@@ -11,8 +11,8 @@ import {
 export default function Conteudo() {
   return (
     <>
-      <div className="static m-0 h-full w-auto bg-amber-200 pb-35">
-        <div className="relative m-auto mt-10 mb-6 w-fit">
+      <div className="static m-0 h-full w-auto pb-35">
+        <div className="relative m-auto mt-10 mb-0 w-fit rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <h1>Trabalhos realizados</h1>
         </div>
         <Carousel
