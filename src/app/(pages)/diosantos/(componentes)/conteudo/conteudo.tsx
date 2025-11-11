@@ -22,19 +22,22 @@ export default function Conteudo() {
           className="w-full max-w-sm"
         >
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/portifolio_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat p-6">
-                      <span className="text-3xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
+            {Array.from({ length: 2 }).map((_, index) => {
+              const n = index + 1;
+              return (
+                <CarouselItem key={index} className="">
+                  <div className="p-1">
+                    <Card>
+                      <CardContent
+                        className={`m-7 flex aspect-square h-full w-auto items-center justify-center bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/portifolio_${n}.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat p-6`}
+                      >
+                        <span className="text-4xl font-semibold">{n}</span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              );
+            })}
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
