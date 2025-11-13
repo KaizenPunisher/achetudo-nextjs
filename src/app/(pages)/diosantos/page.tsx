@@ -19,7 +19,7 @@ export function generateMetadata(): Metadata {
       ],
       siteName: "Dio Santos Criação de Sites Landingpages",
       type: "website", // ou 'article', 'book', etc.
-      url: "https://www.achetudotiradentes.com.br/teste",
+      url: "https://www.achetudotiradentes.com.br/diosantos",
     },
     generator: "Next.js",
     keywords: [
