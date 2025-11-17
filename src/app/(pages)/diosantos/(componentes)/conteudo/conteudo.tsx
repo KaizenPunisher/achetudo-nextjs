@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Conteudo() {
   return (
@@ -24,14 +26,29 @@ export default function Conteudo() {
           <CarouselContent>
             {Array.from({ length: 2 }).map((_, index) => {
               const n = index + 1;
+              const link = ["/", "https://faroldaliberdade.com.br/"];
+
               return (
                 <CarouselItem key={index} className="">
                   <div className="p-1">
                     <Card>
                       <CardContent
-                        className={`m-7 flex aspect-square h-full w-auto items-center justify-center bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/portifolio_${n}.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat p-6`}
+                        className={`m-7 flex aspect-square h-full w-auto items-center justify-center p-0`}
                       >
-                        <span className="text-4xl font-semibold">{n}</span>
+                        <Link
+                          href={link[index]}
+                          className="m-auto"
+                          id="logo"
+                          target="_blank"
+                        >
+                          <Image
+                            alt="Ache Tudo Logo"
+                            priority={false}
+                            src={`https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/portifolio_${n}.png`}
+                            width={300}
+                            height={300}
+                          />
+                        </Link>
                       </CardContent>
                     </Card>
                   </div>
