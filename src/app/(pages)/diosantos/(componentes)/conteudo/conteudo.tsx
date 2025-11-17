@@ -13,8 +13,8 @@ import Image from "next/image";
 export default function Conteudo() {
   return (
     <>
-      <div className="static m-0 h-full w-auto pb-35">
-        <div className="relative m-auto mt-10 mb-0 w-fit rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+      <div className="static m-auto h-full w-auto pb-35">
+        <div className="relative m-auto mt-0 mb-0 w-fit rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <h1>Trabalhos realizados</h1>
         </div>
         <Carousel
@@ -59,6 +59,19 @@ export default function Conteudo() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+      </div>
+      <div className="relative m-auto h-full w-fit">
+        <div className="absolute top-[-120px] left-[30%] z-1 h-40 w-40 rounded-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/perfil_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></div>
+        <div className="relative h-auto w-100 rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+          <h2 className="m-10 text-center">
+            Sou Oscar, Desenvolvedor Web Full Stack e estou aqui para ajudar a
+            levar seu negócio para o próximo nível com soluções digitais
+            personalizadas. Com experiência em criação de sites, lojas virtuais
+            e aplicativos, estou pronto para transformar suas ideias em
+            realidade. Vamos trabalhar juntos para impulsionar sua presença
+            online e alcançar seus objetivos!
+          </h2>
+        </div>
       </div>
     </>
   );
