@@ -61,8 +61,8 @@ export default function Conteudo() {
         </Carousel>
       </div>
       <div className="relative m-auto h-full w-fit">
-        <div className="absolute top-[-120px] left-[30%] z-1 h-40 w-40 rounded-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/perfil_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></div>
-        <div className="relative h-auto w-100 rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+        <div className="absolute top-[-120px] left-[30%] z-1 h-40 w-40 rounded-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/perfil_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat shadow-xl/30"></div>
+        <div className="relative h-auto w-95 rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <h2 className="m-10 text-center">
             Sou Oscar, Desenvolvedor Web Full Stack e estou aqui para ajudar a
             levar seu negócio para o próximo nível com soluções digitais
