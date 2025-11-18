@@ -13,7 +13,7 @@ export default function Slider() {
   return (
     <>
       <div
-        className="relative m-0 mt-30 mb-10 h-50 w-full transition-all duration-100 lg:h-100 lg:w-3/4"
+        className="relative m-0 mt-30 mb-10 h-50 w-screen transition-all duration-100 lg:h-100 lg:w-3/4"
         id="slider"
       >
         <div className="relative m-auto w-fit justify-center text-center">

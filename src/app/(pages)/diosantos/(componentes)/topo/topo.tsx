@@ -8,7 +8,7 @@ import React from "react";
 export default function Topo() {
   return (
     <>
-      <header className="fixed top-0 left-0 z-20 m-auto w-full bg-white/30 p-4 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 z-20 m-auto w-screen bg-white/30 p-4 backdrop-blur-sm">
         <ul className="grid h-auto grid-cols-3 text-center text-xs">
           <a href="#portifolio" className="m-auto">
             <li className="text-xm m-auto pr-4">PORTIFÓLIO</li>

@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function Conteudo() {
   return (
     <>
-      <div className="static m-auto h-full w-auto pb-35">
+      <div className="static m-auto h-full w-screen pb-35">
         <div className="relative m-auto mt-0 mb-0 w-fit rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <h1 id="portifolio">Trabalhos realizados</h1>
         </div>
@@ -60,9 +60,9 @@ export default function Conteudo() {
           <CarouselNext />
         </Carousel>
       </div>
-      <div className="relative m-auto h-full w-fit">
+      <div className="relative m-auto h-full w-screen">
         <div className="absolute top-[-120px] left-[30%] z-1 h-40 w-40 rounded-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/perfil_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat shadow-xl/30"></div>
-        <div className="relative h-auto w-95 rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+        <div className="relative h-auto w-screen rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <h2 className="m-10 text-center">
             Sou Oscar, Desenvolvedor Web Full Stack e estou aqui para ajudar a
             levar seu negócio para o próximo nível com soluções digitais
@@ -104,12 +104,12 @@ export default function Conteudo() {
           </div>
         </div>
       </div>
-      <div className="m-auto h-full w-fit p-5" id="comecar">
+      <div className="m-auto h-full w-screen p-5" id="comecar">
         <div className="p-5 text-center">
           <h1 className="text-cyan-950">O que você deseja?</h1>
         </div>
-        <div className="h-30 w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/produtos.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></div>
-        <div className="mt-5 mb-50 h-auto w-95 rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+        <div className="static h-25 w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/produtos.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></div>
+        <div className="mt-5 mb-50 h-auto w-full rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <div className="m-5 text-center">
             <h2 className="text-cyan-950">Vamos começar?</h2>
             <br />

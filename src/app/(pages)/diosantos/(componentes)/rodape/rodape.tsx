@@ -22,7 +22,7 @@ export default function Rodape() {
   return (
     <>
       <footer
-        className="relative bottom-0 left-0 z-40 m-0 h-auto w-full"
+        className="relative bottom-0 left-0 z-40 m-0 h-auto w-screen"
         id="rodape"
       >
         <div
