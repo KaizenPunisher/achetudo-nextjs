@@ -7,11 +7,6 @@ export default function Slider() {
       const value = window.scrollY;
       const slider = document.getElementById("slider") as HTMLElement;
       if (slider) slider.style.top = `${value * -1}px`;
-      console.log(
-        document.body.scrollHeight,
-        window.innerHeight,
-        window.scrollY,
-      );
     };
     window.addEventListener("scroll", rolagem);
   }, []);
