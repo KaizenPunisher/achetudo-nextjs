@@ -15,7 +15,7 @@ export default function Conteudo() {
     <>
       <div className="static m-auto h-full w-auto pb-35">
         <div className="relative m-auto mt-0 mb-0 w-fit rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
-          <h1>Trabalhos realizados</h1>
+          <h1 id="portifolio">Trabalhos realizados</h1>
         </div>
         <Carousel
           opts={{
@@ -71,9 +71,40 @@ export default function Conteudo() {
             realidade. Vamos trabalhar juntos para impulsionar sua presença
             online e alcançar seus objetivos!
           </h2>
+          <div className="m-auto mt-0 mb-5 w-fit">
+            <Link
+              href={"https://github.com/KaizenPunisher"}
+              className="m-auto"
+              id="logo"
+              target="_blank"
+            >
+              <Image
+                alt="Ache Tudo Logo"
+                priority={false}
+                src={`https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/github.png`}
+                width={50}
+                height={50}
+              />
+            </Link>
+            <br />
+            <Link
+              href={"https://www.linkedin.com/in/oscar-gomes-baaab22b/"}
+              className="m-auto"
+              id="logo"
+              target="_blank"
+            >
+              <Image
+                alt="Ache Tudo Logo"
+                priority={false}
+                src={`https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/linkedin.png`}
+                width={50}
+                height={50}
+              />
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="m-auto h-full w-fit p-5">
+      <div className="m-auto h-full w-fit p-5" id="comecar">
         <div className="p-5 text-center">
           <h1 className="text-cyan-950">O que você deseja?</h1>
         </div>
