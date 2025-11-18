@@ -73,6 +73,37 @@ export default function Conteudo() {
           </h2>
         </div>
       </div>
+      <div className="m-auto h-full w-fit p-5">
+        <div className="p-5 text-center">
+          <h1 className="text-cyan-950">O que você deseja?</h1>
+        </div>
+        <div className="h-30 w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/produtos.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></div>
+        <div className="mt-5 mb-50 h-auto w-95 rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+          <div className="m-5 text-center">
+            <h2 className="text-cyan-950">Vamos começar?</h2>
+            <br />
+            1∙ Receba meu questionário detalhado para entender suas
+            necessidades.
+            <br />
+            <br />
+            2∙ Analiso suas respostas e elaboro uma proposta personalizada.
+            <br />
+            <br />
+            3∙ Após sua aprovação e pagamento da primeira parcela, inicio o
+            desenvolvimento do seu projeto.
+            <br />
+            <br />
+            4∙ Entrego o produto finalizado e ofereço suporte contínuo.
+            <br />
+            <br />
+            <h2 className="text-cyan-950">
+              Pronto para transformar sua presença digital? Entre em contato e
+              vamos dar vida às suas ideias! Desça até o fim da pagina e entre
+              contato com meu Whatsapp
+            </h2>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
