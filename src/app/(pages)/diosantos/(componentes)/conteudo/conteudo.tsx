@@ -64,12 +64,12 @@ export default function Conteudo() {
         <div className="absolute top-[-120px] left-[30%] z-1 h-40 w-40 rounded-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/perfil_1.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat shadow-xl/30"></div>
         <div className="relative h-auto w-screen rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm lg:w-90 2xl:w-90">
           <h2 className="m-10 text-center">
-            Sou Oscar, Desenvolvedor Web Full Stack e estou aqui para ajudar a
-            levar seu negócio para o próximo nível com soluções digitais
-            personalizadas. Com experiência em criação de sites, lojas virtuais
-            e aplicativos, estou pronto para transformar suas ideias em
-            realidade. Vamos trabalhar juntos para impulsionar sua presença
-            online e alcançar seus objetivos!
+            Sou Oscar, Web Designer e estou aqui para ajudar a levar seu negócio
+            para o próximo nível com soluções digitais personalizadas. Com
+            experiência em criação de sites, lojas virtuais e aplicativos, estou
+            pronto para transformar suas ideias em realidade. Vamos trabalhar
+            juntos para impulsionar sua presença online e alcançar seus
+            objetivos!
           </h2>
           <div className="m-auto mt-0 mb-5 w-fit">
             <Link
@@ -109,7 +109,7 @@ export default function Conteudo() {
           <h1 className="text-cyan-950">O que você deseja?</h1>
         </div>
         <div className="static h-25 w-full bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/pages/a61efd63-20d5-464d-86af-8fb1183eee41/produtos.png')] bg-size-[100%_100%] bg-position-[0rem_0rem] bg-no-repeat"></div>
-        <div className="mt-5 mb-50 h-auto w-full rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
+        <div className="mt-5 mb-10 h-auto w-full rounded-xl border-1 border-white/10 bg-white/30 p-2 backdrop-blur-sm">
           <div className="m-5 text-center">
             <h2 className="text-cyan-950">Vamos começar?</h2>
             <br />
