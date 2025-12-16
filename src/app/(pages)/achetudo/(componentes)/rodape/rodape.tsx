@@ -53,7 +53,7 @@ export default function Rodape() {
                   dominio do Ache Tudo
                   <br />
                   <strong className="text-blue-950">
-                    (renovação anual R$70,00)
+                    (renovação anual R$100,00)
                   </strong>
                 </p>
               </div>
