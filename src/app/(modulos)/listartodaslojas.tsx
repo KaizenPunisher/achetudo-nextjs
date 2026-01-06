@@ -52,7 +52,7 @@ const ListarTodasLojas = () => {
                   </div>
                 </a>
                 <span className="clear-both"></span>
-                <Link href="/achetudo" target="_blank" className="float-right">
+                <Link href="/diosantos" target="_blank" className="float-right">
                   <div className="box-border h-10 w-25 rounded-2xl bg-yellow-400 pt-3 shadow-lg/25">
                     <span className="m-auto">Nosso site</span>
                   </div>
