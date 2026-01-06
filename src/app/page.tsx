@@ -1,10 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/logo.svg";
 import Saudacao from "./(componentes)/mensagensdosistema/saudacao";
 import BotaoAnunciar from "./(componentes)/botoes/anunciar";
+import { useState } from "react";
 
 export default function Home() {
+  const [iframeSrc, setIframeSrc] = useState("");
+  const handleMenuClick = (newSrc: string) => {
+    setIframeSrc(newSrc);
+  };
+
   return (
     <div className="bg-yellow-300">
       <main
@@ -35,16 +43,37 @@ export default function Home() {
             id="menu-principal"
           >
             <ul className="grid h-auto grid-cols-3 text-center text-xs">
-              <li className="text-xm bg-white pt-2 pb-2 pl-2">PRODUTOS</li>
-              <li className="text-xm bg-white pt-2 pb-2 pl-2">SERVIÇOS</li>
-              <li className="text-xm bg-white pt-2 pb-2 pl-2">LOJAS</li>
+              <li>
+                <button
+                  className="text-xm h-full w-full cursor-pointer bg-white pt-2 pb-2 pl-2 hover:bg-gray-100"
+                  onClick={() => handleMenuClick("/listagem/produtos")}
+                >
+                  PRODUTOS
+                </button>
+              </li>
+              <li>
+                <button
+                  className="text-xm h-full w-full cursor-pointer bg-white pt-2 pb-2 pl-2 hover:bg-gray-100"
+                  onClick={() => handleMenuClick("/listagem/servicos")}
+                >
+                  SERVIÇOS
+                </button>
+              </li>
+              <li>
+                <button
+                  className="text-xm h-full w-full cursor-pointer bg-white pt-2 pb-2 pl-2 hover:bg-gray-100"
+                  onClick={() => handleMenuClick("/listagem/lojas")}
+                >
+                  LOJAS
+                </button>
+              </li>
             </ul>
           </div>
         </header>
         <section className="h-screen w-auto overflow-auto md:overflow-scroll">
           <iframe
             id="meuIframeJs"
-            src="/listagem/produtos"
+            src={iframeSrc || "/listagem/anuncios"}
             width="355"
             height="560"
             frameBorder="0"

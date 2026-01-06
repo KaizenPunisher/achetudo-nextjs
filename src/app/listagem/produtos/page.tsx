@@ -1,9 +1,9 @@
-import ListarTodosAnuncios from "../../(modulos)/listartodosanuncios";
+import ListarTodosProdutos from "@/app/(modulos)/listartodosprodutos";
 
 const Produtos = () => {
   return (
     <>
-      <ListarTodosAnuncios />
+      <ListarTodosProdutos />
     </>
   );
 };
