@@ -34,13 +34,13 @@ const ListarTodasLojas = () => {
               <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/empresas/a61efd63-20d5-464d-86af-8fb1183eee41/a61efd63-20d5-464d-86af-8fb1183eee41_2.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-4000"></figure>
               <figure className="animate-slider absolute box-border h-[100%] w-[100%] rounded-b-2xl bg-[url('https://achetudotiradentes-nextjs-app.s3.sa-east-1.amazonaws.com/empresas/a61efd63-20d5-464d-86af-8fb1183eee41/a61efd63-20d5-464d-86af-8fb1183eee41_3.jpg')] bg-size-[100%_100%] bg-center bg-no-repeat opacity-0 transition-opacity delay-10000"></figure>
             </div>
-            <section className="font-comfortaa absolute top-60 left-1 box-border h-auto w-86 rounded-2xl bg-white p-3 md:top-10 md:left-135">
+            <section className="font-comfortaa absolute top-58 left-1 box-border h-auto w-85 rounded-2xl bg-white p-3 md:top-10 md:left-135">
               <div className="float-start h-auto w-full pt-1 pb-1">
                 <div className="pb-3 text-center">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3944499045506!2d-46.398615299999996!3d-23.590182499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6f2ad55e1983%3A0x3870f652a83f01de!2sDio%20Santos!5e0!3m2!1spt-BR!2sbr!4v1767630450794!5m2!1spt-BR!2sbr"
-                    width="318"
-                    height="230"
+                    width="315"
+                    height="210"
                     style={{ border: 0 }}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
