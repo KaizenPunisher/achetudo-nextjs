@@ -73,7 +73,7 @@ export default function Home() {
         <section className="h-screen w-auto overflow-auto md:overflow-scroll">
           <iframe
             id="meuIframeJs"
-            src={iframeSrc || "/listagem/anuncios"}
+            src={iframeSrc || "/listagem/lojas"}
             width="355"
             height="560"
             frameBorder="0"
