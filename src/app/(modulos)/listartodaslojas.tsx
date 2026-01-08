@@ -21,8 +21,8 @@ const ListarTodasLojas = () => {
               priority={false}
               className="absolute h-full w-full"
             />
-            <h3 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 pt-1 pr-2 pl-2 wrap-break-word">
-              Landing Page Profissional
+            <h3 className="absolute inset-x-0 bottom-0 z-10 h-10 overflow-hidden bg-white/80 pt-1 pr-2 pl-2 wrap-break-word">
+              Dio Santos Designer Digital - Sites e Logo Marcas
             </h3>
           </a>
           <div
@@ -75,8 +75,8 @@ const ListarTodasLojas = () => {
               priority={false}
               className="absolute h-full w-full"
             />
-            <h3 className="absolute inset-x-0 bottom-0 z-10 h-11 overflow-hidden bg-white/80 pt-1 pr-2 pl-2 wrap-break-word">
-              Perfumaria e cosméticos
+            <h3 className="absolute inset-x-0 bottom-0 z-10 h-10 overflow-hidden bg-white/80 pt-1 pr-2 pl-2 wrap-break-word">
+              Bazar e Perfumaria Belly
             </h3>
           </a>
           <div
@@ -106,11 +106,6 @@ const ListarTodasLojas = () => {
                   </div>
                 </a>
                 <span className="clear-both"></span>
-                <Link href="/diosantos" target="_blank" className="float-right">
-                  <div className="box-border h-10 w-25 rounded-2xl bg-yellow-400 pt-3 shadow-lg/25">
-                    <span className="m-auto">Nosso site</span>
-                  </div>
-                </Link>
               </div>
             </section>
           </div>
